@@ -1,2 +1,2 @@
 file1.txt 
-version: 1
+version: 2
