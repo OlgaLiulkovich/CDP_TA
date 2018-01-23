@@ -1,2 +1,3 @@
 file1.txt 
 version: 6
+comment added
