@@ -1,0 +1,1017 @@
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 ~
+$ cd c:\\olga\cdp
+bash: cd: c:\olgacdp: No such file or directory
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 ~
+$ cd c:/olga/cdp
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp
+$ ssh-keygen -t rsa -C "olga_liulkovich@epam.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Olga_Liulkovich/.ssh/id_rsa):
+Created directory '/c/Users/Olga_Liulkovich/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Passphrases do not match.  Try again.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Saving key "/c/Users/Olga_Liulkovich/.ssh/id_rsa" failed: passphrase is too shor              t (minimum five characters)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp
+$ ssh-keygen -t rsa -C "olga_liulkovich@epam.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Olga_Liulkovich/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Olga_Liulkovich/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Olga_Liulkovich/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:yoXxZmWclgYjkFkH3i4DEVlD5v0zo1zL/ya3mzC9ljY olga_liulkovich@epam.com
+The key's randomart image is:
++---[RSA 2048]----+
+|    +XO.+        |
+|    += * + o     |
+|    . + o O      |
+|     . = *       |
+|      + S *      |
+|     . O + = .   |
+|      o o o o .. |
+|           ..oEo |
+|            .B*+ |
++----[SHA256]-----+
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp
+$ git clone git@github.com:OlgaLiulkovich/CDP_TA.git
+Cloning into 'CDP_TA'...
+The authenticity of host 'github.com (192.30.253.112)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of know              n hosts.
+warning: You appear to have cloned an empty repository.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp
+$ ls
+CDP_TA/
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp
+$ git branch -a
+fatal: Not a git repository (or any of the parent directories): .git
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp
+$ git branch -all
+fatal: Not a git repository (or any of the parent directories): .git
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp
+$ git branches
+git: 'branches' is not a git command. See 'git --help'.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp
+$ git --help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp
+$ git branch
+fatal: Not a git repository (or any of the parent directories): .git
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp
+$ cd cdp_ta
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git branch
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ ls
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git branch -a
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git branch -all
+error: did you mean `--all` (with two dashes ?)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git branch --all
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git branch
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git branch a
+fatal: Not a valid object name: 'master'.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git commit -am "file1.txt & file2.txt"
+On branch master
+
+Initial commit
+
+Untracked files:
+        file1.txt
+        file2.txt
+
+nothing added to commit but untracked files present
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git add .
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   file1.txt
+        new file:   file2.txt
+
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git commit -am "file1.txt & file2.txt"
+[master (root-commit) 23341ad] file1.txt & file2.txt
+ 2 files changed, 4 insertions(+)
+ create mode 100644 file1.txt
+ create mode 100644 file2.txt
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git push
+Warning: Permanently added the RSA host key for IP address '192.30.253.113' to t              he list of known hosts.
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 304 bytes | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To github.com:OlgaLiulkovich/CDP_TA.git
+ * [new branch]      master -> master
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git commit -am "file1.txt v2"
+[master c49b617] file1.txt v2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 300 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:OlgaLiulkovich/CDP_TA.git
+   23341ad..c49b617  master -> master
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git commit -am "file2.txt v2"
+[master d3eb470] file2.txt v2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 299 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:OlgaLiulkovich/CDP_TA.git
+   c49b617..d3eb470  master -> master
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git pull
+remote: Counting objects: 3, done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From github.com:OlgaLiulkovich/CDP_TA
+   d3eb470..7d16027  master     -> origin/master
+Updating d3eb470..7d16027
+Fast-forward
+ file1.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git --help
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git branch developer
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git branch -a
+  developer
+* master
+  remotes/origin/master
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git checkout dedveloper
+error: pathspec 'dedveloper' did not match any file(s) known to git.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git checkout developer
+Switched to branch 'developer'
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git branch -a
+* developer
+  master
+  remotes/origin/master
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git commit -am "file1.txt v4 into developer branch"
+[developer 095612a] file1.txt v4 into developer branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git push
+fatal: The current branch developer has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin developer
+
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git push -u origin developer
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 317 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:OlgaLiulkovich/CDP_TA.git
+ * [new branch]      developer -> developer
+Branch developer set up to track remote branch developer from origin.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git branch -a
+* developer
+  master
+  remotes/origin/developer
+  remotes/origin/master
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git commit -am "file2.txt v3 into developer branch"
+[developer d9b506a] file2.txt v3 into developer branch
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 315 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:OlgaLiulkovich/CDP_TA.git
+   095612a..d9b506a  developer -> developer
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git merge developer
+Updating 7d16027..d9b506a
+Fast-forward
+ file1.txt | 2 +-
+ file2.txt | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git commit -am "merge branch into master"
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0)
+To github.com:OlgaLiulkovich/CDP_TA.git
+   7d16027..d9b506a  master -> master
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git commit -am "file2.txt v4 to master"
+[master a8ee83d] file2.txt v4 to master
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 307 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:OlgaLiulkovich/CDP_TA.git
+   d9b506a..a8ee83d  master -> master
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git checkout developer
+Switched to branch 'developer'
+Your branch is up-to-date with 'origin/developer'.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git commit -am "file1.txt v5 to developer"
+[developer 6461e8e] file1.txt v5 to developer
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 311 bytes | 0 bytes/s, done.
+To github.com:OlgaLiulkovich/CDP_TA.git
+   d9b506a..6461e8e  developer -> developer
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git commit -am "file2.txt comment added to developer"
+[developer 49df5de] file2.txt comment added to developer
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 345 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:OlgaLiulkovich/CDP_TA.git
+   6461e8e..49df5de  developer -> developer
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: file1.txt v5 to developer
+Applying: file2.txt comment added to developer
+Using index info to reconstruct a base tree...
+M       file2.txt
+Falling back to patching base and 3-way merge...
+Auto-merging file2.txt
+CONFLICT (content): Merge conflict in file2.txt
+error: Failed to merge in the changes.
+Patch failed at 0002 file2.txt comment added to developer
+The copy of the patch that failed is found in: .git/rebase-apply/patch
+
+When you have resolved this problem, run "git rebase --continue".
+If you prefer to skip this patch, run "git rebase --skip" instead.
+To check out the original branch and stop rebasing, run "git rebase --abort".
+
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|REBASE 2/2)
+$ git branch -a
+* (no branch, rebasing developer)
+  developer
+  master
+  remotes/origin/developer
+  remotes/origin/master
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|REBASE 2/2)
+$ git rebase master
+
+It seems that there is already a rebase-apply directory, and
+I wonder if you are in the middle of another rebase.  If that is the
+case, please try
+        git rebase (--continue | --abort | --skip)
+If that is not the case, please
+        rm -fr "C:/olga/cdp/cdp_ta/.git/rebase-apply"
+and run me again.  I am stopping in case you still have something
+valuable there.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|REBASE 2/2)
+$ git rebase --continue
+file2.txt: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|REBASE 2/2)
+$ git add .
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|REBASE 2/2)
+$ git status
+rebase in progress; onto a8ee83d
+You are currently rebasing branch 'developer' on 'a8ee83d'.
+  (all conflicts fixed: run "git rebase --continue")
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   file2.txt
+
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|REBASE 2/2)
+$ git rebase --continue
+Applying: file2.txt comment added to developer
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git push
+To github.com:OlgaLiulkovich/CDP_TA.git
+ ! [rejected]        developer -> developer (non-fast-forward)
+error: failed to push some refs to 'git@github.com:OlgaLiulkovich/CDP_TA.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git pull
+Auto-merging file2.txt
+CONFLICT (content): Merge conflict in file2.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|MERGING)
+$ git pull
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|MERGING)
+$ git add .
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|MERGING)
+$ git status
+On branch developer
+Your branch and 'origin/developer' have diverged,
+and have 3 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+        modified:   file2.txt
+
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|MERGING)
+$ git push --continue
+error: unknown option `continue'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --repo <repository>   repository
+    --all                 push all refs
+    --mirror              mirror all refs
+    -d, --delete          delete refs
+    --tags                push tags (can't be used with --all or --mirror)
+    -n, --dry-run         dry run
+    --porcelain           machine-readable output
+    -f, --force           force updates
+    --force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --recurse-submodules[=<check|on-demand|no>]
+                          control recursive pushing of submodules
+    --thin                use thin pack
+    --receive-pack <receive-pack>
+                          receive pack program
+    --exec <receive-pack>
+                          receive pack program
+    -u, --set-upstream    set upstream for git pull/status
+    --progress            force progress reporting
+    --prune               prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --follow-tags         push missing but relevant tags
+    --signed[=<yes|no|if-asked>]
+                          GPG sign the push
+    --atomic              request atomic transaction on remote side
+    -o, --push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|MERGING)
+$ git merge --continue
+error: unknown option `continue'
+usage: git merge [<options>] [<commit>...]
+   or: git merge [<options>] <msg> HEAD <commit>
+   or: git merge --abort
+
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commi              t message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --ff                  allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --rerere-autoupdate   update the index with reused conflict resolution if po              ssible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --abort               abort the current in-progress merge
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+    --progress            force progress reporting
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --overwrite-ignore    update ignored files (default)
+
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|MERGING)
+$ git push
+To github.com:OlgaLiulkovich/CDP_TA.git
+ ! [rejected]        developer -> developer (non-fast-forward)
+error: failed to push some refs to 'git@github.com:OlgaLiulkovich/CDP_TA.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|MERGING)
+$ git pull
+error: You have not concluded your merge (MERGE_HEAD exists).
+hint: Please, commit your changes before merging.
+fatal: Exiting because of unfinished merge.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|MERGING)
+$ git rebase --continue
+No rebase in progress?
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|MERGING)
+$ git log
+commit 3e4c5b2be3c8f39b9ee161f2f807e9b5269fbfb7
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 22:12:41 2018 -0500
+
+    file2.txt comment added to developer
+
+commit 3370a76071a0c0d2117e912aa071e1368d4cea79
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 22:11:46 2018 -0500
+
+    file1.txt v5 to developer
+
+commit a8ee83d1f15ff7910364d0bed43adddff0833e95
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 22:10:26 2018 -0500
+
+    file2.txt v4 to master
+
+commit d9b506a2b99c17b4bbc47de78d55359ade427f9f
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 22:04:23 2018 -0500
+
+    file2.txt v3 into developer branch
+
+commit 095612a9980dcb94a74469347f1348753c2d6a54
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 22:00:55 2018 -0500
+
+    file1.txt v4 into developer branch
+
+commit 7d1602791bb8d85b13295828572fa34b5b9e5235
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 21:57:20 2018 -0500
+
+    file1.txt updated through github.com to v3
+
+commit d3eb4709ced547e20b901f008472280b2d17a5cd
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 21:55:06 2018 -0500
+
+    file2.txt v2
+
+commit c49b617da598d6d8115e0309c0093a1c87590d39
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 21:54:06 2018 -0500
+
+    file1.txt v2
+
+commit 23341ad79ddb31efba780b188af319f177b6a1b8
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 21:51:48 2018 -0500
+
+    file1.txt & file2.txt
+(END)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|MERGING)
+$ git status
+On branch developer
+Your branch and 'origin/developer' have diverged,
+and have 3 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+
+        modified:   file2.txt
+
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer|MERGING)
+$ git commit -am "file2.txt merging"
+[developer 1edd8af] file2.txt merging
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git push
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 883 bytes | 0 bytes/s, done.
+Total 8 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:OlgaLiulkovich/CDP_TA.git
+   49df5de..1edd8af  developer -> developer
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git status
+On branch developer
+Your branch is up-to-date with 'origin/developer'.
+nothing to commit, working tree clean
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git commit -am "file1.txt v6"
+[developer aca16c0] file1.txt v6
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git commit -am "file1.txt comment added"
+[developer 5b7fd70] file1.txt comment added
+ 1 file changed, 1 insertion(+)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git push
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 591 bytes | 0 bytes/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+To github.com:OlgaLiulkovich/CDP_TA.git
+   1edd8af..5b7fd70  developer -> developer
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git log
+commit 5b7fd708603bee40e7d315a604e36b65ced0b9e7
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 22:33:13 2018 -0500
+
+    file1.txt comment added
+
+commit aca16c0c4493a9973b9d2606fe8ac90c06c9170b
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 22:31:54 2018 -0500
+
+    file1.txt v6
+
+commit 1edd8af23e1c380b2e79d5862a1e43364a7d6a9d
+Merge: 3e4c5b2 49df5de
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 22:30:16 2018 -0500
+
+    file2.txt merging
+
+commit 3e4c5b2be3c8f39b9ee161f2f807e9b5269fbfb7
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 22:12:41 2018 -0500
+
+:
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git cherry-pick  1edd8af23e1c380b2e79d5862a1e43364a7d6a9d
+error: commit 1edd8af23e1c380b2e79d5862a1e43364a7d6a9d is a merge but no -m opti              on was given.
+fatal: cherry-pick failed
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git cherry-pick  -m 1edd8af23e1c380b2e79d5862a1e43364a7d6a9d
+error: switch `m' expects a numerical value
+usage: git cherry-pick [<options>] <commit-ish>...
+   or: git cherry-pick <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add Signed-off-by:
+    -m, --mainline <n>    parent number
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    -x                    append commit name
+    --ff                  allow fast-forward
+    --allow-empty         preserve initially empty commits
+    --allow-empty-message
+                          allow commits with empty messages
+    --keep-redundant-commits
+                          keep redundant, empty commits
+
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git cherry-pick 1edd8af23e1c380b2e79d5862a1e43364a7d6a9d
+error: commit 1edd8af23e1c380b2e79d5862a1e43364a7d6a9d is a merge but no -m option was given.
+fatal: cherry-pick failed
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git cherry-pick aca16c0c4493a9973b9d2606fe8ac90c06c9170b
+error: could not apply aca16c0... file1.txt v6
+hint: after resolving the conflicts, mark the corrected paths
+hint: with 'git add <paths>' or 'git rm <paths>'
+hint: and commit the result with 'git commit'
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master|CHERRY-PICKING)
+$ git cherry-pick --continue
+U       file1.txt
+error: Committing is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master|CHERRY-PICKING)
+$ git merge --continue
+error: unknown option `continue'
+usage: git merge [<options>] [<commit>...]
+   or: git merge [<options>] <msg> HEAD <commit>
+   or: git merge --abort
+
+    -n                    do not show a diffstat at the end of the merge
+    --stat                show a diffstat at the end of the merge
+    --summary             (synonym to --stat)
+    --log[=<n>]           add (at most <n>) entries from shortlog to merge commit message
+    --squash              create a single commit instead of doing a merge
+    --commit              perform a commit if the merge succeeds (default)
+    -e, --edit            edit message before committing
+    --ff                  allow fast-forward (default)
+    --ff-only             abort if fast-forward is not possible
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --verify-signatures   verify that the named commit has a valid GPG signature
+    -s, --strategy <strategy>
+                          merge strategy to use
+    -X, --strategy-option <option=value>
+                          option for selected merge strategy
+    -m, --message <message>
+                          merge commit message (for a non-fast-forward merge)
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --abort               abort the current in-progress merge
+    --allow-unrelated-histories
+                          allow merging unrelated histories
+    --progress            force progress reporting
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --overwrite-ignore    update ignored files (default)
+
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master|CHERRY-PICKING)
+$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+You are currently cherry-picking commit aca16c0.
+  (fix conflicts and run "git cherry-pick --continue")
+  (use "git cherry-pick --abort" to cancel the cherry-pick operation)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+
+        both modified:   file1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master|CHERRY-PICKING)
+$ git checkout HEAD
+file1.txt: needs merge
+error: you need to resolve your current index first
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master|CHERRY-PICKING)
+$ git checkout -hard
+usage: git checkout [<options>] <branch>
+   or: git checkout [<options>] [<branch>] -- <file>...
+
+    -q, --quiet           suppress progress reporting
+    -b <branch>           create and checkout a new branch
+    -B <branch>           create/reset and checkout a branch
+    -l                    create reflog for new branch
+    --detach              detach HEAD at named commit
+    -t, --track           set upstream info for new branch
+    --orphan <new-branch>
+                          new unparented branch
+    -2, --ours            checkout our version for unmerged files
+    -3, --theirs          checkout their version for unmerged files
+    -f, --force           force checkout (throw away local modifications)
+    -m, --merge           perform a 3-way merge with the new branch
+    --overwrite-ignore    update ignored files (default)
+    --conflict <style>    conflict style (merge or diff3)
+    -p, --patch           select hunks interactively
+    --ignore-skip-worktree-bits
+                          do not limit pathspecs to sparse entries only
+    --ignore-other-worktrees
+                          do not check if another worktree is holding the given ref
+    --progress            force progress reporting
+
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master|CHERRY-PICKING)
+$ git pull
+error: Pulling is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master|CHERRY-PICKING)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+Did you mean this?
+        add
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master|CHERRY-PICKING)
+$ git add .
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master|CHERRY-PICKING)
+$ git cherry-pick
+usage: git cherry-pick [<options>] <commit-ish>...
+   or: git cherry-pick <subcommand>
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add Signed-off-by:
+    -m, --mainline <n>    parent number
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    -x                    append commit name
+    --ff                  allow fast-forward
+    --allow-empty         preserve initially empty commits
+    --allow-empty-message
+                          allow commits with empty messages
+    --keep-redundant-commits
+                          keep redundant, empty commits
+
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master|CHERRY-PICKING)
+$ git cherry-pick --continue
+[master a11fb53] file1.txt v6
+ Date: Mon Jan 22 22:31:54 2018 -0500
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (master)
+$ git checkout developer
+Switched to branch 'developer'
+Your branch is up-to-date with 'origin/developer'.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git log
+commit 5b7fd708603bee40e7d315a604e36b65ced0b9e7
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 22:33:13 2018 -0500
+
+    file1.txt comment added
+
+commit aca16c0c4493a9973b9d2606fe8ac90c06c9170b
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 22:31:54 2018 -0500
+
+    file1.txt v6
+
+commit 1edd8af23e1c380b2e79d5862a1e43364a7d6a9d
+Merge: 3e4c5b2 49df5de
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 22:30:16 2018 -0500
+
+    file2.txt merging
+
+commit 3e4c5b2be3c8f39b9ee161f2f807e9b5269fbfb7
+Author: OlgaLiulkovich <oliulkovich@copyright.com>
+Date:   Mon Jan 22 22:12:41 2018 -0500
+
+:
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git revert 5b7fd708603bee40e7d315a604e36b65ced0b9e7
+[developer 3734acc] Revert "file1.txt comment added"
+ 1 file changed, 1 deletion(-)
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git commit
+On branch developer
+Your branch is ahead of 'origin/developer' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git status
+On branch developer
+Your branch is ahead of 'origin/developer' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working tree clean
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git pull
+Already up-to-date.
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$ git push
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 335 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:OlgaLiulkovich/CDP_TA.git
+   5b7fd70..3734acc  developer -> developer
+
+Olga_Liulkovich@EPUSPRIW0458 MINGW64 /c/olga/cdp/cdp_ta (developer)
+$
