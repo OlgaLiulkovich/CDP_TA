@@ -8,9 +8,16 @@ import java.util.List;
  */
 public class runner {
 
-    List<IFlower> b = new bouquet().createBouquet();
+    //List<IFlower> b = new bouquet().createBouquet();
+
 
     bouquet obj = new bouquet();
+
+    List<IFlower> bo = obj.createBouquet();
+
+    obj.createBouquet();
+
+    obj.calcPrice(bo);
 
     //calcPrice????????
 

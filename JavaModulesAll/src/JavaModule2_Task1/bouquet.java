@@ -25,19 +25,18 @@ public class bouquet {
         b.add(new carnations(6, "purple", 55));
 
         return b;
-
-        /*
-        for (int i = 0; i < bouquet.size(); i++) {
-            IFlower f = bouquet.get(i);
-            System.out.println(f.getName() + " " + f.getPrice());
-            bouquetPrice += f.getPrice();
-        }
-*/
-
     }
+
+    /**
+     *
+     * @param bouquet
+     */
 
     public void calcPrice (List<IFlower> bouquet) {
 
+        /**
+         * 
+         */
         double bouquetPrice = 0;
 
         Iterator <IFlower> it = bouquet.iterator();
