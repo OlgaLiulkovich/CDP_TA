@@ -11,7 +11,7 @@ public class bouquet {
 
     private bouquet b;
 
-    public void bouquet() {
+    public bouquet() {
 
     }
 

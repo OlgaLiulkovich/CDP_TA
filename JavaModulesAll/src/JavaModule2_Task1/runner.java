@@ -10,17 +10,18 @@ public class runner {
 
     //List<IFlower> b = new bouquet().createBouquet();
 
+    public static void main(String[] args) {
 
-    bouquet obj = new bouquet();
+        bouquet obj = new bouquet();
 
-    List<IFlower> bo = obj.createBouquet();
+        List<IFlower> bo = obj.createBouquet();
 
-    obj.createBouquet();
+        obj.createBouquet();
 
-    obj.calcPrice(bo);
+        obj.calcPrice(bo);
 
-    //calcPrice????????
+        //calcPrice????????
 
-
+    }
 
 }

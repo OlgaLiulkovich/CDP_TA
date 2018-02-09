@@ -1,4 +1,4 @@
-package JavaModule1;
+package com.epam.cdp.java_testng.Olga_Liulkovich.JM1.task1;
 
 /**
  * Java module 1
@@ -11,20 +11,27 @@ package JavaModule1;
  *
  * @author Olga Liulkovich
  */
-public class task1 {
+public class Task1 {
 
+    private int[] randomNumbers = new int[20];
 
-    public task1() {
-        /* creation & filling array */
+    /**
+     * Default constructor
+     */
+    public Task1() {
 
+    }
+
+    /**
+     * Fills the array for Task1
+     */
+    public void fillArray() {
         // define the range
         int max = 10;
         int min = -10;
         int range = max - min + 1;
 
         // fill in array
-        int[] randomNumbers = new int[20];
-
         System.out.println("initial array:");
 
         for (int i = 0; i < randomNumbers.length; i++) {
@@ -33,7 +40,12 @@ public class task1 {
             System.out.print(Integer.toString(n) + " ");
         }
         System.out.println();
+    }
 
+    /**
+     * Add all elements on the even positions for the pre-filled array
+     */
+    public void addEvens() {
         /* go through elements in even positions and sum calculation*/
         int sum = 0;
 
