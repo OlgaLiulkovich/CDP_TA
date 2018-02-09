@@ -1,5 +1,6 @@
 package JavaModule1;
 
+// AM: unused imports should be removed
 import java.math.BigInteger;
 import java.util.Scanner;
 
@@ -11,8 +12,10 @@ import java.util.Scanner;
  *
  * @author Olga Liulkovich
  */
+// AM: class names should be uppercase
 class task3 {
-
+    // AM: it's a good practice to add the visibility of the methods, can eliminate some issues
+    // AM: also, the constructor is only responsible to create/setup the object, it shouldn't contain all the logic
     task3() {
 
         // read numbers - value 1
@@ -64,7 +67,7 @@ class task3 {
 
     }
 
-
+// AM: Unused functions can be deleted
 /*
     public static String readSystemIn() {
 
