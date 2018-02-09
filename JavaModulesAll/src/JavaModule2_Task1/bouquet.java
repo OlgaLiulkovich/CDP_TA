@@ -9,14 +9,34 @@ import java.util.List;
  */
 public class bouquet {
 
-    public static void main(String[] args) {
-        List<IFlower> bouquet = new ArrayList<IFlower>();
-        bouquet.add(new rose(2, "yellow", 22.2));
-        bouquet.add(new rose(3, "white", 22.2));
-        bouquet.add(new rose(2, "yellow", 22.2));
-        bouquet.add(new chamomile("german", 10));
-        bouquet.add(new carnations(5, "purple", 55));
-        bouquet.add(new carnations(6, "purple", 55));
+    private bouquet b;
+
+    public void bouquet() {
+
+    }
+
+    public List<IFlower> createBouquet() {
+        List<IFlower> b = new ArrayList<IFlower>();
+        b.add(new rose(2, "yellow", 22.2));
+        b.add(new rose(3, "white", 22.2));
+        b.add(new rose(2, "yellow", 22.2));
+        b.add(new chamomile("german", 10));
+        b.add(new carnations(5, "purple", 55));
+        b.add(new carnations(6, "purple", 55));
+
+        return b;
+
+        /*
+        for (int i = 0; i < bouquet.size(); i++) {
+            IFlower f = bouquet.get(i);
+            System.out.println(f.getName() + " " + f.getPrice());
+            bouquetPrice += f.getPrice();
+        }
+*/
+
+    }
+
+    public void calcPrice (List<IFlower> bouquet) {
 
         double bouquetPrice = 0;
 
@@ -28,14 +48,6 @@ public class bouquet {
             System.out.println(obj.getName() + " " + obj.getPrice());
             bouquetPrice += obj.getPrice();
         }
-
-        /*
-        for (int i = 0; i < bouquet.size(); i++) {
-            IFlower f = bouquet.get(i);
-            System.out.println(f.getName() + " " + f.getPrice());
-            bouquetPrice += f.getPrice();
-        }
-*/
         System.out.println("Total price = " + bouquetPrice);
 
     }
