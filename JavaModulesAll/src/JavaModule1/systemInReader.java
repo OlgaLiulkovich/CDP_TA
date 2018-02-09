@@ -1,7 +1,8 @@
 package JavaModule1;
 
 import java.util.Scanner;
-
+// AM: use the auto-format of intellij (here and in the other files as well
+// AM: class should start with capital letter
 /**
 @author Olga_Liulkovich  */
 public class systemInReader {

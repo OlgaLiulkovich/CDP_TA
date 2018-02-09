@@ -1,5 +1,5 @@
 package JavaModule1;
-
+// AM: unused imports should be removed
 import java.util.Scanner;
 
 /**
@@ -13,7 +13,11 @@ import java.util.Scanner;
  *
  * @author Olga Liulkovich
  */
+// AM: Should be Task2 (capital first letter for classes).
+// The task is not working properly, it still pick the shortest string instead of the least diverse
 class task2 {
+    // AM: it's a good practice to add the visibility of the methods, can eliminate some issues
+    // Reading the values and other operations should be handled by separate method(s) (like diversityCalc)
     task2 () {
 
         // reading values from System.in
@@ -57,7 +61,7 @@ class task2 {
         }
     }
 
-
+    // AM: Javadoc should be added to each method
     private double diversityCalc(String arg) {
 
         arg = arg.toLowerCase();
