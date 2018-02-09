@@ -1,3 +1,7 @@
+package JavaModule2_Task1;
+
+import JavaModule2_Task1.IFlower;
+
 /**
  * Created by Olga_Liulkovich on 2/7/2018.
  */
