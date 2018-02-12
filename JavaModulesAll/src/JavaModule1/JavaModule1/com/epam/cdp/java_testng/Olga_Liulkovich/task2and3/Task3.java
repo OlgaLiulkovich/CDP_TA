@@ -1,7 +1,4 @@
-package JavaModule1;
-
-import java.math.BigInteger;
-import java.util.Scanner;
+package JavaModule1.JavaModule1.com.epam.cdp.java_testng.Olga_Liulkovich.task2and3;
 
 /**
  * Java module 1
@@ -11,24 +8,41 @@ import java.util.Scanner;
  *
  * @author Olga Liulkovich
  */
-class task3 {
+class Task3 {
 
-    task3() {
+    public static int value1Int;
+    public static String operator;
+    public static int value2Int;
+    public static String value1Str;
+    public static String value2Str;
+
+
+    Task3() {
+    }
+
+
+    /**
+     * method ReadValues() reads parameters and operator from System.in
+     */
+    static void ReadValues() {
 
         // read numbers - value 1
         System.out.println("Please enter 2 integer values & operator");
         System.out.print("Value #1:                 ");
-        String value1Str = systemInReader.readSystemIn();
-        int value1Int;
+        value1Str = SystemInReader.ReadSystemIn();
 
         System.out.print("Operator (+, -, * or /):  ");
-        String operator = systemInReader.readSystemIn();
+        operator = SystemInReader.ReadSystemIn();
 
         System.out.print("Value #2:                 ");
-        String value2Str = systemInReader.readSystemIn();
-        int value2Int;
+        value2Str = SystemInReader.ReadSystemIn();
 
+    }
 
+    /**
+     * method Calculate performs validation of entered values and calculations
+     */
+    public static void Calculate() {
         try {
             value1Int = Integer.parseInt(value1Str);
             value2Int = Integer.parseInt(value2Str);
@@ -64,18 +78,5 @@ class task3 {
 
     }
 
-
-/*
-    public static String readSystemIn() {
-
-        Scanner scanner = new Scanner(System.in);
-        String line = scanner.nextLine();
-
-        if (line.equals("")) {
-            return "";
-        } else
-            return line;
-
-    }
-    */
 }
+

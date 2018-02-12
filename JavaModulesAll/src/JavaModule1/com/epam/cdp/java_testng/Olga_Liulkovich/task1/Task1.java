@@ -1,4 +1,4 @@
-package JavaModule1;
+package JavaModule1.com.epam.cdp.java_testng.Olga_Liulkovich.task1;
 
 /**
  * Java module 1
@@ -11,10 +11,15 @@ package JavaModule1;
  *
  * @author Olga Liulkovich
  */
-public class task1 {
+public class Task1 {
 
+    public Task1() {
+    }
 
-    public task1() {
+    /**
+     * @return array of integer values
+     */
+    static int[] FillInArray() {
         /* creation & filling array */
 
         // define the range
@@ -23,30 +28,40 @@ public class task1 {
         int range = max - min + 1;
 
         // fill in array
-        int[] randomNumbers = new int[20];
+        int[] RandomNumbers = new int[20];
 
         System.out.println("initial array:");
 
-        for (int i = 0; i < randomNumbers.length; i++) {
+        for (int i = 0; i < RandomNumbers.length; i++) {
             int n = (int) (Math.random() * range + min);
-            randomNumbers[i] = n;
+            RandomNumbers[i] = n;
             System.out.print(Integer.toString(n) + " ");
         }
         System.out.println();
+
+        return RandomNumbers;
+
+    }
+
+    /**
+     * @param RandomNumbers array of integer values
+     */
+    static void CalcSum(int[] RandomNumbers) {
 
         /* go through elements in even positions and sum calculation*/
         int sum = 0;
 
         System.out.println("sum of elements in even positions in the array:");
 
-        for (int i = 1; i < randomNumbers.length; i = i + 2) {
-            sum = sum + randomNumbers[i];
-            if (i < randomNumbers.length - 1) {
-                System.out.print(Integer.toString(randomNumbers[i]) + " + ");
+        for (int i = 1; i < RandomNumbers.length; i = i + 2) {
+            sum = sum + RandomNumbers[i];
+            if (i < RandomNumbers.length - 1) {
+                System.out.print(Integer.toString(RandomNumbers[i]) + " + ");
             } else {
-                System.out.print(Integer.toString(randomNumbers[i]));
+                System.out.print(Integer.toString(RandomNumbers[i]));
             }
         }
         System.out.println(" = " + Integer.toString(sum));
     }
+
 }

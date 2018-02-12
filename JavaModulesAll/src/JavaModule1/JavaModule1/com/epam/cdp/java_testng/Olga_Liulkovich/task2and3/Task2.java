@@ -1,6 +1,4 @@
-package JavaModule1;
-
-import java.util.Scanner;
+package JavaModule1.JavaModule1.com.epam.cdp.java_testng.Olga_Liulkovich.task2and3;
 
 /**
  * Java module 1
@@ -13,24 +11,42 @@ import java.util.Scanner;
  *
  * @author Olga Liulkovich
  */
-class task2 {
-    task2 () {
+class Task2 {
+
+    public static int i;
+
+    void Task2() {
+    }
+
+    /**
+     * @return array of string that were read from System.in
+     */
+    static String[] ReadValues() {
 
         // reading values from System.in
 
         String[] stringArray = new String[1000];
-        int i = 0;
+        i = 0;
 
         System.out.println("Please enter your strings:");
 
-        //task2 stringLine = new task2();
-        String line = systemInReader.readSystemIn();
+        String line = SystemInReader.ReadSystemIn();
         //while (line != null || !line.equals("") || line.length()>0) {
         while (!line.isEmpty()) {
             stringArray[i] = line;
             i++;
-            line = systemInReader.readSystemIn();
+            line = SystemInReader.ReadSystemIn();
         }
+
+        return stringArray;
+    }
+
+
+    /**
+     * @param stringArray - array of string values that were read from system.in
+     */
+    public static void CalculateDiversity(String[] stringArray) {
+
 
         // array for storing diversity per string; find min diversity
 
@@ -40,8 +56,8 @@ class task2 {
         int j;
 
         for (j = 0; j < i; j++) {
-            diversityArray[j] = this.diversityCalc(stringArray[j]);
-            if (minDiversity > diversityArray[j]) {
+            diversityArray[j] = diversityCalc(stringArray[j]);
+            if (minDiversity < diversityArray[j]) {
                 minDiversity = diversityArray[j];
             }
         }
@@ -58,7 +74,13 @@ class task2 {
     }
 
 
-    private double diversityCalc(String arg) {
+    /**
+     * function for calculation of diversity for a given string
+     *
+     * @param arg string that will be used for diversity calculation
+     * @return double value of diversity for a string
+     */
+    private static double diversityCalc(String arg) {
 
         arg = arg.toLowerCase();
 
