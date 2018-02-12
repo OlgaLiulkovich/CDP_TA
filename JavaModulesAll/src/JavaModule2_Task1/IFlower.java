@@ -5,6 +5,6 @@ package JavaModule2_Task1;
  */
 public interface IFlower extends IGood {
 
-    String getName();
+    String GetName();
 
 }

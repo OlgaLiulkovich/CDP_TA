@@ -3,26 +3,30 @@ package JavaModule2_Task1;
 /**
  * @author Olga Liulkovich
  */
-public class chamomile extends flower {
+public class Chamomile extends Flower {
 
     private String type;
 
-    public chamomile(String type, double price) {
+    /**
+     * @param type  defines type of Chamomile
+     * @param price defines base price of Chamomile
+     */
+    public Chamomile(String type, double price) {
         this.type = type;
         this.price = price;
         this.name = "chamomile";
     }
 
-    public String getType() {
+    public String GetType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void SetType(String type) {
         this.type = type;
     }
 
     @Override
-    public double getPrice() {
+    public double GetPrice() {
         return this.price;
     }
 }

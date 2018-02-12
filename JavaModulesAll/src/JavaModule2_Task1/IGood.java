@@ -5,6 +5,6 @@ package JavaModule2_Task1;
  */
 public interface IGood {
 
-    double getPrice();
+    double GetPrice();
 
 }
