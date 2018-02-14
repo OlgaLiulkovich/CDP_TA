@@ -1,6 +1,7 @@
 package JavaModule2_Task1;
 
 /**
+ * basic descr here
  * @author Olga Liulkovich
  */
 public class Carnations extends Flower {
@@ -14,6 +15,7 @@ public class Carnations extends Flower {
     private String color;
 
     /**
+     * basic constructor for this type of flower - to add
      * @param quantity defines how many buds Carnations have
      * @param color    defines color of the Carnations
      * @param price    defines base price of the Carnations

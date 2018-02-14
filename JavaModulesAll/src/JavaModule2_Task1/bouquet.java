@@ -11,37 +11,33 @@ import java.util.List;
  */
 public class Bouquet {
 
-    private List<IFlower> listFlowers = new ArrayList<IFlower>();
+    private List<IFlower> listFlowers ;
 
     public void Bouquet() {
-//        listFlowers = new ArrayList<IFlower>();
+        listFlowers = new ArrayList<IFlower>();
     }
 
+
+    // add exception here like 4 the same flowers
     public void add(IFlower flower){
         listFlowers.add(flower);
     }
 
+
     public void delete(int ind){
         listFlowers.remove(ind);
-    }
-
-    //create bouquet method
-
-    public List<IFlower> createBouquet() {
-
-        List<IFlower> b = new ArrayList<IFlower>();
-
-        return b;
     }
 
     /**
      * Price calculation method
      */
 
+
+    // exception for empty bouquet
     public double calcPrice() {
 
         /**
-         * @param BouquetPrice is used to calculate total price of the bouquet
+         * @param BouquetPrice is used to calculate total price of the bouquet - TO BE DELETED
          */
 
         double BouquetPrice = 0;
