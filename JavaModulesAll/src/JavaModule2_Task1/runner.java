@@ -1,7 +1,5 @@
 package JavaModule2_Task1;
 
-import java.util.List;
-
 /**
  * TASK 1
  * Implement object model for defined variation (see variations below). Use the following:
@@ -42,8 +40,3 @@ public class Runner {
 
 }
 
-
-
-
-
-// test

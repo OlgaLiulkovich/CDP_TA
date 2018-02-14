@@ -3,7 +3,8 @@ package JavaModule2_Task1;
 import JavaModule2_Task1.IFlower;
 
 /**
- * * @author Olga Liulkovich
+ * Base class Flower
+ * author Olga Liulkovich
  */
 
 public abstract class Flower implements IFlower {

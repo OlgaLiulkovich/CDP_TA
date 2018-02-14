@@ -1,6 +1,8 @@
 package JavaModule2_Task1;
 
 /**
+ * Rose is one of the types of the flowers that can be added to the bouquet
+ *
  * @author Olga Liulkovich
  */
 public class Rose extends Flower {
