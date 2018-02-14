@@ -22,31 +22,31 @@ public class Runner {
 
         // Array List
 
-        List<String> ArrayListDemo = ArrList.FillIn();
+        List<String> ArrayListDemo = ArrList.fillIn();
 
         long AddArrTime;
         long FindArrTime;
         long RemoveArrTime;
 
-        AddArrTime = ArrList.Add(ArrayListDemo);
+        AddArrTime = ArrList.add(ArrayListDemo);
 
-        FindArrTime = ArrList.Find(ArrayListDemo);
+        FindArrTime = ArrList.find(ArrayListDemo);
 
-        RemoveArrTime = ArrList.Remove(ArrayListDemo);
+        RemoveArrTime = ArrList.remove(ArrayListDemo);
 
         // Linked List
 
-        List<String> LinkedListDemo = LinkList.FillIn();
+        List<String> LinkedListDemo = LinkList.fillIn();
 
         long AddLinkTime;
         long FindLinkTime;
         long RemoveLinkTime;
 
-        AddLinkTime = LinkList.Add(LinkedListDemo);
+        AddLinkTime = LinkList.add(LinkedListDemo);
 
-        FindLinkTime = LinkList.Find(LinkedListDemo);
+        FindLinkTime = LinkList.find(LinkedListDemo);
 
-        RemoveLinkTime = LinkList.Remove(LinkedListDemo);
+        RemoveLinkTime = LinkList.remove(LinkedListDemo);
 
         // printing results for Array & Linked Lists
 
@@ -61,27 +61,27 @@ public class Runner {
 
         // HashSet
 
-        Set<Integer> set = HSet.FillIn();
+        Set<Integer> set = HSet.fillIn();
 
         long AddHSetTime;
         long FindHSetTime;
         long RemoveHSetTime;
 
-        AddHSetTime = HSet.Add(set);
-        FindHSetTime = HSet.Find(set);
-        RemoveHSetTime = HSet.Remove(set);
+        AddHSetTime = HSet.add(set);
+        FindHSetTime = HSet.find(set);
+        RemoveHSetTime = HSet.remove(set);
 
         // Tree Set
 
-        Set<Integer> Tset = TSet.FillIn();
+        Set<Integer> Tset = TSet.fillIn();
 
         long AddTSetTime;
         long FindTSetTime;
         long RemoveTSetTime;
 
-        AddTSetTime = TSet.Add(Tset);
-        FindTSetTime = TSet.Find(Tset);
-        RemoveTSetTime = TSet.Remove(Tset);
+        AddTSetTime = TSet.add(Tset);
+        FindTSetTime = TSet.find(Tset);
+        RemoveTSetTime = TSet.remove(Tset);
 
         // printing results
 
@@ -97,29 +97,29 @@ public class Runner {
 
         // Hash Map
 
-        Map<Integer, Double> Hmap = HMap.FillIn();
+        Map<Integer, Double> Hmap = HMap.fillIn();
 
 
         long AddHMapTime;
         long FindHMapTime;
         long RemoveHMapTime;
 
-        AddHMapTime = HMap.Add(Hmap);
-        FindHMapTime = HMap.Find(Hmap);
-        RemoveHMapTime = HMap.Remove(Hmap);
+        AddHMapTime = HMap.add(Hmap);
+        FindHMapTime = HMap.find(Hmap);
+        RemoveHMapTime = HMap.remove(Hmap);
 
         // TreeMap
 
-        Map<Integer, Double> Tmap = TMap.FillIn();
+        Map<Integer, Double> Tmap = TMap.fillIn();
 
 
         long AddTMapTime;
         long FindTMapTime;
         long RemoveTMapTime;
 
-        AddTMapTime = HMap.Add(Tmap);
-        FindTMapTime = HMap.Find(Tmap);
-        RemoveTMapTime = HMap.Remove(Tmap);
+        AddTMapTime = HMap.add(Tmap);
+        FindTMapTime = HMap.find(Tmap);
+        RemoveTMapTime = HMap.remove(Tmap);
 
         // print resutls
 

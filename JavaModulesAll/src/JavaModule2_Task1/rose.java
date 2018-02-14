@@ -21,23 +21,23 @@ public class Rose extends Flower {
     }
 
     @Override
-    public double GetPrice() {
+    public double getPrice() {
         return this.price * this.length / 0.5;
     }
 
-    public String GetColor() {
+    public String getColor() {
         return color;
     }
 
-    public void SetColor(String color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
-    public int GetLength() {
+    public int getLength() {
         return length;
     }
 
-    public void SetLength(int length) {
+    public void setLength(int length) {
         this.length = length;
     }
 }

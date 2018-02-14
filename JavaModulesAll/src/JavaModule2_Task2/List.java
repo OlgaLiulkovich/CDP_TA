@@ -14,7 +14,7 @@ public class List {
      * @param list of string values
      * @return nanoTime spent for an operation
      */
-    public static long Add(java.util.List<String> list) {
+    public static long add(java.util.List<String> list) {
         long start = System.nanoTime();
         list.add("newly added element");
         return System.nanoTime() - start;
@@ -25,7 +25,7 @@ public class List {
      * @return nanoTime spent for an operation
      */
 
-    public static long Find(java.util.List<String> list) {
+    public static long find(java.util.List<String> list) {
         long start = System.nanoTime();
         list.contains("element # 4000");
         return System.nanoTime() - start;
@@ -35,7 +35,7 @@ public class List {
      * @param list of string values
      * @return nanoTime spent for an operation
      */
-    public static long Remove(java.util.List<String> list) {
+    public static long remove(java.util.List<String> list) {
         long start = System.nanoTime();
         list.remove(5000);
         return System.nanoTime() - start;

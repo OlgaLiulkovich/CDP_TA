@@ -25,13 +25,19 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        Bouquet obj = new Bouquet();
+        Bouquet b = new Bouquet();
 
-        List<IFlower> bo = obj.CreateBouquet();
+        b.add(new Rose(2, "yellow", 22.2));
+        b.add(new Rose(3, "white", 22.2));
+        b.add(new Rose(2, "yellow", 22.2));
+        b.add(new Chamomile("german", 10));
+        b.add(new Carnations(5, "purple", 55));
+        b.add(new Carnations(6, "purple", 55));
 
-        obj.CalcPrice(bo);
+        double bouquetPrice = b.calcPrice();
+
+        System.out.println("Total price = " + bouquetPrice);
 
     }
-
 
 }

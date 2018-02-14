@@ -16,7 +16,7 @@ public class LinkList extends JavaModule2_Task2.List {
      * @return List of Strings
      */
 
-    public static List<String> FillIn() {
+    public static List<String> fillIn() {
         List<String> list = new LinkedList<>();
         int i;
         for (i = 0; i < 7000; i++) {

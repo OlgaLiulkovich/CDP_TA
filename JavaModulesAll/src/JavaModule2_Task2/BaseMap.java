@@ -16,7 +16,7 @@ public class BaseMap {
      * @param map contains Map of double values with integer as a key
      * @return nanoTime spent for an operation
      */
-    public static long Add(Map<Integer, Double> map) {
+    public static long add(Map<Integer, Double> map) {
         long start = System.nanoTime();
         map.put(7000, 1.1);
         return System.nanoTime() - start;
@@ -26,7 +26,7 @@ public class BaseMap {
      * @param map contains Map of double values with integer as a key
      * @return nanoTime spent for an operation
      */
-    public static long Find(Map<Integer, Double> map) {
+    public static long find(Map<Integer, Double> map) {
         long start = System.nanoTime();
         map.get(3500);
         return System.nanoTime() - start;
@@ -36,7 +36,7 @@ public class BaseMap {
      * @param map contains Map of double values with integer as a key
      * @return nanoTime spent for an operation
      */
-    public static long Remove(Map<Integer, Double> map) {
+    public static long remove(Map<Integer, Double> map) {
         long start = System.nanoTime();
         map.remove(3600);
         return System.nanoTime() - start;

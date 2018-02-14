@@ -18,7 +18,7 @@ public class TSet extends JavaModule2_Task2.Set {
     /**
      * @return filled in Set of integer values which will be used for downstream operations
      */
-    public static Set<Integer> FillIn() {
+    public static Set<Integer> fillIn() {
         Set<Integer> set = new TreeSet<>();
         int i;
         for (i = 0; i < 7000; i++) {

@@ -15,10 +15,10 @@ public abstract class Flower implements IFlower {
 
     }
 
-    public String GetName() {
+    public String getName() {
         return name;
     }
 
-    public abstract double GetPrice();
+    public abstract double getPrice();
 
 }

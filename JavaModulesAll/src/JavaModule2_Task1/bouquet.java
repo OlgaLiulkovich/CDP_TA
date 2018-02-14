@@ -1,5 +1,6 @@
 package JavaModule2_Task1;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -10,30 +11,34 @@ import java.util.List;
  */
 public class Bouquet {
 
+    private List<IFlower> listFlowers = new ArrayList<IFlower>();
+
     public void Bouquet() {
+//        listFlowers = new ArrayList<IFlower>();
+    }
+
+    public void add(IFlower flower){
+        listFlowers.add(flower);
+    }
+
+    public void delete(int ind){
+        listFlowers.remove(ind);
     }
 
     //create bouquet method
 
-    public List<IFlower> CreateBouquet() {
+    public List<IFlower> createBouquet() {
 
         List<IFlower> b = new ArrayList<IFlower>();
-        b.add(new Rose(2, "yellow", 22.2));
-        b.add(new Rose(3, "white", 22.2));
-        b.add(new Rose(2, "yellow", 22.2));
-        b.add(new Chamomile("german", 10));
-        b.add(new Carnations(5, "purple", 55));
-        b.add(new Carnations(6, "purple", 55));
 
         return b;
     }
 
     /**
      * Price calculation method
-     * @param Bouquet is a created bouquet
      */
 
-    public void CalcPrice (List<IFlower> Bouquet) {
+    public double calcPrice() {
 
         /**
          * @param BouquetPrice is used to calculate total price of the bouquet
@@ -41,15 +46,16 @@ public class Bouquet {
 
         double BouquetPrice = 0;
 
-        Iterator <IFlower> it = Bouquet.iterator();
+        Iterator <IFlower> it = listFlowers.iterator();
 
         while (it.hasNext()) {
             IFlower obj = it.next();
 
-            System.out.println(obj.GetName() + " " + obj.GetPrice());
-            BouquetPrice += obj.GetPrice();
+            System.out.println(obj.getName() + " " + obj.getPrice());
+            BouquetPrice += obj.getPrice();
         }
-        System.out.println("Total price = " + BouquetPrice);
+
+        return BouquetPrice;
 
     }
 

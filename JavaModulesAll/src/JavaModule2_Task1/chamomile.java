@@ -17,16 +17,16 @@ public class Chamomile extends Flower {
         this.name = "chamomile";
     }
 
-    public String GetType() {
+    public String getType() {
         return type;
     }
 
-    public void SetType(String type) {
+    public void setType(String type) {
         this.type = type;
     }
 
     @Override
-    public double GetPrice() {
+    public double getPrice() {
         return this.price;
     }
 }

@@ -27,7 +27,7 @@ public class Carnations extends Flower {
     }
 
     @Override
-    public double GetPrice() {
+    public double getPrice() {
         return this.price * this.quantity / 5;
     }
 }

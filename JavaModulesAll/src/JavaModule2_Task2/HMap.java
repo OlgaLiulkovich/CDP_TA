@@ -16,7 +16,7 @@ public class HMap extends BaseMap {
     /**
      * @return HashMap containing Map of double values with integer as a key
      */
-    public static Map<Integer, Double> FillIn() {
+    public static Map<Integer, Double> fillIn() {
         Map<Integer, Double> map = new HashMap<>();
 
         int i;
