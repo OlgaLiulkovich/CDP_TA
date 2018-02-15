@@ -34,18 +34,24 @@ public class Bouquet {
      */
 
     // exception for empty bouquet
-    public double calcPrice() {
+    public double calcPrice() throws EmptyBouquetException {
 
         double BouquetPrice = 0;
 
         Iterator<IFlower> it = listFlowers.iterator();
 
-        while (it.hasNext()) {
-            IFlower obj = it.next();
+        if (listFlowers.size() > 0) {
+            while (it.hasNext()) {
+                IFlower obj = it.next();
 
-            System.out.println(obj.getName() + " " + obj.getPrice());
-            BouquetPrice += obj.getPrice();
+                System.out.println(obj.getName() + " " + obj.getPrice());
+                BouquetPrice += obj.getPrice();
+            }
+
+        } else {
+            throw new EmptyBouquetException(listFlowers.size());
         }
+
 
         return BouquetPrice;
 

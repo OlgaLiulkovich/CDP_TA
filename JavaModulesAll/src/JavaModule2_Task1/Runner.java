@@ -32,10 +32,22 @@ public class Runner {
         b.add(new Carnations(5, "purple", 55));
         b.add(new Carnations(6, "purple", 55));
 
-        double bouquetPrice = b.calcPrice();
+        //double bouquetPrice = b.calcPrice();
 
-        System.out.println("Total price = " + bouquetPrice);
+        //System.out.println("Total price = " + bouquetPrice);
 
+        // Exception call for JM3 task 1
+
+        Bouquet bException = new Bouquet();
+
+        try {
+            double emptyBPrice = bException.calcPrice();
+        }
+        catch (EmptyBouquetException e)
+        {
+            System.out.println("Can't calc price for an empty bouquet");
+            e.printStackTrace();
+        }
     }
 
 }
