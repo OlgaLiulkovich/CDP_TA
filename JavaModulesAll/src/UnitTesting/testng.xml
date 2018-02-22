@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testng">
+    <test name="testSumDouble">
+        <classes>
+            <class name="UnitTesting.Runner">
+                <methods>
+                <include name="testDivLongPositive" />
+
+                </methods>
+
+
+            </class>
+        </classes>
+    </test>
+
+
+</suite>
