@@ -2,7 +2,7 @@
 <suite name="testng">
     <test name="testSumDouble">
         <classes>
-            <class name="UnitTesting.Runner">
+            <class name="UnitTesting.RunnerTestNG">
                 <methods>
                 <include name="testDivLongPositive" />
 

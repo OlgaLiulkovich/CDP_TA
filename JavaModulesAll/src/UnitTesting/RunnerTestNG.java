@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
  *
  * @author Olga_Liulkovich
  */
-public class Runner {
+public class RunnerTestNG {
 
     private Calculator calc = new Calculator();
 
@@ -19,6 +19,7 @@ public class Runner {
 
         double sum = calc.sum(a, b);
         Assert.assertEquals(sum, expResult);
+        //Assert.assertEquals(sum, expResult,"Expected: " + a = " + " + b + " = " + expResult = " Actual result: " + sum); /// what's wrong here?
 
     }
 
@@ -28,11 +29,12 @@ public class Runner {
                 {3, 5, 8.0},
                 {3, -5, -2.0},
                 {0.00, -1, -1.0},
-                {-2147483648, 0, -2147483648}, //check int vs double - TODO
-                {0, -2147483648, -2147483648},
+                {-1.79769313486231570E+308, 0, -1.79769313486231570E+308},
+                {0, -1.79769313486231570E+308, -1.79769313486231570E+308},
                 {2147483647, 0, 2147483647},
                 {0, 2147483647, 2147483647},
-                {-1.79769313486231570E+308, -1.79769313486231570E+308, 5} // exception?
+                {-1.79769313486231570E+308, -1.79769313486231570E+308, 5}, // exception?
+                {1.7976931348623157E308, 1.7976931348623157E308, 5} // exception?
 
         };
     }
@@ -55,9 +57,9 @@ public class Runner {
 
     }
 
-    @Test (expectedExceptions = NumberFormatException.class, expectedExceptionsMessageRegExp="Attempt to divide by zero")
-    public void testDivLongNegative (){
-        calc.div(2,0);
+    @Test(expectedExceptions = NumberFormatException.class, expectedExceptionsMessageRegExp = "Attempt to divide by zero")
+    public void testDivLongNegative() {
+        calc.div(2, 0);
     }
 }
 
