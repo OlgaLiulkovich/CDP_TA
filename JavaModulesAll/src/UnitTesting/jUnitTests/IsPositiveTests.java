@@ -2,17 +2,30 @@ package UnitTesting.jUnitTests;
 
 import com.epam.tat.module4.Calculator;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 /**
- * Test Runner for unit tests run under jUnit
+ * Unit tests for IsPositive method using jUnit
  *
  * @author Olga_Liulkovich
  */
-public class Runner {
 
-    private Calculator calc = new Calculator();
+public class IsPositiveTests {
+
+    protected Calculator calc;
+
+    @BeforeClass
+    public void setUp() {
+        Calculator calc = new Calculator();
+    }
+
+    @AfterClass
+    public void tearDown() {
+        //empty
+    }
 
     @Test(dataProvider = "isPositiveTestDataProvider")
     public void isPositiveTest(long param, boolean expResult) {
@@ -26,12 +39,13 @@ public class Runner {
         return new Object[][]{
                 {1, true},
                 {-1, false},
-                {0, false}//,
-                //{9223372036854775807, false} // how to make it accept long?
+                {0, false},
+                {9223372036854775807L, true},
+                {-9223372036854775807L, false}
         };
     }
 
     ;
 
-
 }
+

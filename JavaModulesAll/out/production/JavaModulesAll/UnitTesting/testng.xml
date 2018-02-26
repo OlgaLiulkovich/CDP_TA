@@ -1,17 +1,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="testng">
-    <test name="testSumDouble">
+<suite name="testng" parallel="classes" thread-count="2">
+    <test name="SumDoubleTests">
         <classes>
-            <class name="UnitTesting.RunnerTestNG">
+            <class name="UnitTesting.TestNGTests.SumDoubleTests">
                 <methods>
-                <include name="testDivLongPositive" />
-
+                    <include name="testSumDouble"/>
+                    <include name="testSumDoubleString"/>
                 </methods>
-
-
+            </class>
+            <class name="UnitTesting.TestNGTests.DivLongTests">
+                <methods>
+                    <include name="testDivLongPositive" />
+                    <include name="testDivLongNegative" />
+                    <include name="testDivLongPositiveDataString" />
+                </methods>
             </class>
         </classes>
     </test>
-
 
 </suite>
