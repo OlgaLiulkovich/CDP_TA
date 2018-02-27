@@ -19,7 +19,7 @@ public class IsPositiveTests {
 
     @BeforeClass
     public void setUp() {
-        Calculator calc = new Calculator();
+        calc = new Calculator();
     }
 
     @AfterClass
