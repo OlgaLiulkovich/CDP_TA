@@ -1,4 +1,5 @@
-//import org.testng.Assert;
+import org.openqa.selenium.JavascriptExecutor;
+import org.testng.Assert;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,6 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
@@ -19,16 +23,28 @@ import java.util.concurrent.TimeUnit;
 
 
 public class SeleniumRunner {
-    //@Test
-    public static void main(String[] args) {
+
+    static WebDriver driver;
+
+    @BeforeClass()
+    public static void startWebDriver() {
+
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-        WebDriver driver = new ChromeDriver();
+
+        driver = new ChromeDriver();
+
         driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().window().maximize();
 
+    }
+
+    @Test
+    public static void OrderFlow() {
+
         // selecting env to run tests on
         String env = "pre"; // non prod env
+
 
         // open refB landing page
         driver.get("http://" + env + "100.copyright.com/AppDispatchServlet?publisherName=refB&publication=RefB1&author=Snoopy&orderBeanReset=true&title=refB+Title&volumeNum=34&issueNum=15&debug=1&contentID=10.3945/ajcn.115.122937&numPages=10&proxyOrder=false&publicationDate=July+6%2C+2008");
@@ -53,11 +69,7 @@ public class SeleniumRunner {
 
         // check price
         String expPrice = "822.75 USD";
-        if (price.equals(expPrice)) {
-            System.out.println("Price is correct");
-        } else {
-            System.out.println("Incorrect price estimated: " + price + " expected price: " + expPrice);
-        }
+        Assert.assertEquals(expPrice, price, "Incorrect price estimated: " + price + " expected price: " + expPrice);
 
         // navigate to Login page
         driver.findElement(By.name("continue")).click();
@@ -104,37 +116,28 @@ public class SeleniumRunner {
             String value = entry.getValue();
 
             String text = driver.findElement(By.name(name)).getText();
-            if (!text.equals(value)) {
-                System.out.println("Incorrect value is displayed for the field" + name + ", exp value is " + value);
-            }
+            Assert.assertEquals(text,value,"Incorrect value is displayed for the field" + name + ", exp value is " + value );
         }
 
         // price
-        if (!driver.findElement(By.name("priceDouble")).getText().equals(expPrice)) {
-            System.out.println("Incorrect price on Review Order page: " + price + " expected price: " + expPrice);
-        } else {
-            System.out.println("Price is correct on Order Review Page");
-        }
+        Assert.assertEquals(expPrice, driver.findElement(By.name("priceDouble")).getText(), "Incorrect price on Review Order page: " + price + " expected price: " + expPrice);
 
         // check check boxes
 
-        driver.findElement(By.name("termsAgree")).click();
+        driver.findElement(By.cssSelector("input[name=termsAgree]")).click(); // redesign to CSS selector
 
+        driver.findElement(By.cssSelector("input[name=hasContent]")).click(); // redesign to CSS selector
 
-        /*
-        if ( !driver.findElement(By.name("termsAgree")).isSelected() )
-        {
-            driver.findElement(By.name("termsAgree")).click();
-        }
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("window.scrollBy(0,250)", "");
 
-        if ( !driver.findElement(By.name("hasContent")).isSelected() )
-        {
-            driver.findElement(By.name("hasContent")).click();
-        }
-*/
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
 
+    @AfterClass
+    static void closeDriver() {
         driver.close();
     }
+
 }
