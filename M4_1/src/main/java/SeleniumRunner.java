@@ -109,7 +109,7 @@ public class SeleniumRunner {
         // check user's data on Review Order page
 
         // QPP data
-        Map<String, String> qppDetailsFields = QPPDetailsfields.fillInQPPDetailsfields();
+        Map<String, String> qppDetailsFields = QPPfields.QPPDetailsfields.fillInQPPDetailsfields();
 
         for (Map.Entry<String, String> entry : qppDetailsFields.entrySet()) {
             String name = entry.getKey();
