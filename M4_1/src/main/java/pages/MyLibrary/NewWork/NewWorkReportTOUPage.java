@@ -23,33 +23,33 @@ public class NewWorkReportTOUPage extends AbstractNewWorkPage {
 
     public NewWorkReportTOUPage fillInTitle(String value) {
         driver.findElement(TITLE_LOCATOR).sendKeys(value);
-        return new NewWorkReportTOUPage(driver);
+        return this;
     }
 
     public NewWorkReportTOUPage fillInAuthor(String value) {
         driver.findElement(AUTHOR_LOCATOR).sendKeys(value);
-        return new NewWorkReportTOUPage(driver);
+        return this;
     }
 
     public NewWorkReportTOUPage fillInPublisher(String value) {
         driver.findElement(PUBLISHER_LOCATOR).sendKeys(value);
-        return new NewWorkReportTOUPage(driver);
+        return this;
     }
 
     public NewWorkReportTOUPage selectYear(String value) {
         Select yearDdl = new Select(driver.findElement(YEAR_LOCATOR));
         yearDdl.selectByVisibleText(value);
-        return new NewWorkReportTOUPage(driver);
+        return this;
     }
 
     public NewWorkReportTOUPage fillInWorkSize(String value) {
         driver.findElement(WORK_SIZE_LOCATOR).sendKeys(value);
-        return new NewWorkReportTOUPage(driver);
+        return this;
     }
 
     public NewWorkReportTOUPage clickContinue() {
         driver.findElement(CONTINUE_LOCATOR).click();
-        return new NewWorkReportTOUPage(driver);
+        return this;
     }
 
     public NewWorkReportTOUPage fillInNewWork(
@@ -65,7 +65,7 @@ public class NewWorkReportTOUPage extends AbstractNewWorkPage {
         page.fillInPublisher(publisher);
         page.fillInWorkSize(workSize);
         page.selectYear(year);
-        return new NewWorkReportTOUPage(driver);
+        return this;
     }
 
 

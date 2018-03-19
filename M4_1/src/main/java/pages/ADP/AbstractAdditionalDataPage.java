@@ -24,12 +24,12 @@ public class AbstractAdditionalDataPage extends AbstractPage {
 
     public AbstractAdditionalDataPage fillInOrderRef(String value){
         driver.findElement(ORDER_REFERENCE_LOCATOR).sendKeys(value);
-        return new AbstractAdditionalDataPage(driver);
+        return this;
     }
 
     public AbstractAdditionalDataPage clickContinue(){
         driver.findElement(CONTINUE_LOCATOR).click();
-        return new AbstractAdditionalDataPage(driver);
+        return this;
     }
 
 

@@ -19,22 +19,22 @@ public class LoginPage extends AbstractPage {
 
     public LoginPage fillinUserName (String name){
         driver.findElement(USERNAME_LOCATOR).sendKeys(name);
-        return new LoginPage(driver);
+        return this;
     }
     public LoginPage fillinPassword (String name){
         driver.findElement(PASSWORD_LOCATOR).sendKeys(name);
-        return new LoginPage(driver);
+        return this;
     }
     public LoginPage clickSignIn (){
         driver.findElement(SIGNIN_LOCATOR).click();
-        return new LoginPage(driver);
+        return this;
     }
 
     public LoginPage signIn(LoginPage page, String userName, String password){
         page.fillinUserName(userName);
         page.fillinPassword(password);
         page.clickSignIn();
-        return new LoginPage(driver);
+        return this;
     }
 
     public String getTitle(){

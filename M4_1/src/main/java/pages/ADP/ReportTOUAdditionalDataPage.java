@@ -18,12 +18,12 @@ public class ReportTOUAdditionalDataPage extends AbstractAdditionalDataPage {
 
     public ReportTOUAdditionalDataPage fillInCirculation(String value){
         driver.findElement(CIRCULATION_LOCATOR).sendKeys(value);
-        return new ReportTOUAdditionalDataPage(driver);
+        return this;
     }
 
     public ReportTOUAdditionalDataPage fillInPortions(String value){
         driver.findElement(PORTIONS_LOCATOR).sendKeys(value);
-        return new ReportTOUAdditionalDataPage(driver);
+        return this;
     }
 
 

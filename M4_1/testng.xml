@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="testng" parallel="classes" thread-count="2">
-    <test name="SumDoubleTests">
+    <test name="ReuseInABookMRSelectWork">
         <classes>
             <class name="SeleniumRunner">
                 <methods>

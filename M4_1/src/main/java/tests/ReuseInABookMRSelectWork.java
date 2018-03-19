@@ -1,9 +1,6 @@
 package tests;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -29,16 +26,8 @@ public class ReuseInABookMRSelectWork {
 
     @BeforeClass(description = "Start browser")
     private void initBrowser() {
-        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--incognito");
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-        driver = new ChromeDriver(capabilities);
-        driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-
+        Utils beforeClass = new Utils();
+        driver = beforeClass.initBrowser();
     }
 
     @Test(dataProvider = "Reuse in a Book Job Ticket", description = "Smoke Test for refB TOU = reuse in a book - Job Ticket")
@@ -99,7 +88,8 @@ public class ReuseInABookMRSelectWork {
 
     @AfterClass(description = "Close browser")
     public void closeBrowser() {
-        driver.close();
+        Utils afterClass = new Utils();
+        afterClass.closeBrowser(driver);
     }
 
 

@@ -12,7 +12,7 @@ public class LogOutPage extends AbstractPage {
 
     public LogOutPage clickLogout(){
         driver.findElement(LOGOUT_LOCATOR).click();
-        return new LogOutPage(driver);
+        return this;
     }
 
     public LogOutPage(WebDriver driver){super(driver);}
