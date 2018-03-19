@@ -18,14 +18,8 @@ public class AbstractAdditionalDataPage extends AbstractPage {
     private static final By ORDER_REFERENCE_LOCATOR = By.name("PONumber");
     private static final By CONTINUE_LOCATOR = By.linkText("CONTINUE");
 
-
-    public Boolean verifyTitle() {
-
-        if (driver.findElement(PAGE_TITLE_LOCATOR).getText() == "Additional Information") {
-            return true;
-        } else {
-            return false;
-        }
+    public String getTitle(){
+        return driver.findElement(PAGE_TITLE_LOCATOR).getText();
     }
 
     public AbstractAdditionalDataPage fillInOrderRef(String value){

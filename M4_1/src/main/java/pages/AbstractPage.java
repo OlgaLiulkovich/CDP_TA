@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 /**
  * Abstract Page class
@@ -33,5 +34,13 @@ public abstract class AbstractPage {
     protected void waitForElementEnabled(By locator) {
         new WebDriverWait(driver, WAIT_FOR_ELEMENT_TIMEOUT_SECONDS).until(ExpectedConditions.elementToBeClickable(locator));
     }
+
+    public abstract String getTitle();
+
+    public Boolean isCurrent(String title) {
+        return this.getTitle().equals(title);
+    }
+
+    // add here isCurrent method
 
 }

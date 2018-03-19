@@ -13,10 +13,16 @@ public class ReportTOUAdditionalDataPage extends AbstractAdditionalDataPage {
     }
 
     private static final By CIRCULATION_LOCATOR = By.name("circulation");
+    private static final By PORTIONS_LOCATOR = By.name("detailsOfUse");
 
 
     public ReportTOUAdditionalDataPage fillInCirculation(String value){
         driver.findElement(CIRCULATION_LOCATOR).sendKeys(value);
+        return new ReportTOUAdditionalDataPage(driver);
+    }
+
+    public ReportTOUAdditionalDataPage fillInPortions(String value){
+        driver.findElement(PORTIONS_LOCATOR).sendKeys(value);
         return new ReportTOUAdditionalDataPage(driver);
     }
 

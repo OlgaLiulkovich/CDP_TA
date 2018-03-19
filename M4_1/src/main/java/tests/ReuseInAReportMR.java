@@ -18,12 +18,13 @@ import pages.QuickPricePage;
 
 import java.util.concurrent.TimeUnit;
 
+
 /**
- * Test for Reuse in a Report TOU - straight license case
+ * Test for Reuse in a Report TOU - JOb Ticket case, New Work is created
  *
  * @author Olga_Liulkovich
  */
-public class ReuseInAReportStraightLicense {
+public class ReuseInAReportMR {
 
     private WebDriver driver;
 
@@ -41,12 +42,13 @@ public class ReuseInAReportStraightLicense {
 
     }
 
-    @Test(dataProvider = "Reuse in a Report Straight License", description = "Smoke Test for refB TOU = reuse in a report - Straight License")
+    @Test(dataProvider = "Reuse in a Report Job Ticket", description = "Smoke Test for refB TOU = reuse in a report - Job Ticket")
     public void ReuseInAReportStraightLicenseTest(
             String typeOfUse,
             String requesterType,
             String format,
             String portion,
+            String numPortion,
             String translating,
             String price,
 
@@ -60,13 +62,14 @@ public class ReuseInAReportStraightLicense {
             String year,
 
             String orderRef,
+            String portions,
             String circulation
     ) {
 
         // open landing page
         QuickPricePage refBPage = new QuickPricePage(driver).open("s");
         // fill in QPP
-        refBPage.fillInQPP(refBPage, typeOfUse, requesterType, format, portion, translating);
+        refBPage.fillInQPP(typeOfUse, requesterType, format, portion, numPortion, translating);
         //calculate price and assert it
         refBPage.clickQuickPrice();
         Assert.assertEquals(refBPage.getPrice(), price, "Incorrect price estimated");
@@ -86,6 +89,7 @@ public class ReuseInAReportStraightLicense {
         // fill in ADP
         adp.fillInOrderRef(orderRef);
         adp.fillInCirculation(circulation);
+        adp.fillInPortions(portions);
         adp.clickContinue();
         //check that Order Review page got open
         ReviewOrderPage reviewOrder = new ReviewOrderPage(driver);
@@ -106,19 +110,13 @@ public class ReuseInAReportStraightLicense {
     }
 
 
-    @DataProvider(name = "Reuse in a Report Straight License")
+    @DataProvider(name = "Reuse in a Report Job Ticket")
     public static Object[][] validTestData() {
         return new Object[][]{
-                {"reuse in a report", "Government", "Print and electronic", "Full article", "No", "822.75 USD",//QPP data
+                {"reuse in a report", "Government", "Print and electronic", "Figure/table/extract", "11", "No", "Not Available",//QPP data
                         "oliulkovich@copyright.com", "123456", //login data }
                         "test title", "OL test", "OL test", "50", "2020", //new work data
-                        "OL test", "100" //ADP data
-                },
-
-                {"reuse in a report", "Public Sector", "Electronic", "Full article", "No", "548.50 USD",//QPP data
-                        "oliulkovich@copyright.com", "123456", //login data }
-                        "test title", "OL test", "OL test", "50", "2020", //new work data
-                        "OL test", "100" //ADP data
+                        "OL test", "OL Test Portion", "100" //ADP data
                 }
 
         };

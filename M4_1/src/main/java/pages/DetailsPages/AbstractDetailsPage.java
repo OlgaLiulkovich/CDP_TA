@@ -8,7 +8,7 @@ import pages.AbstractPage;
 /**
  * Abstract class for Details pages
  */
-public class AbstractDetailsPage extends AbstractPage {
+public abstract class AbstractDetailsPage extends AbstractPage {
 
     public AbstractDetailsPage(WebDriver driver) {
         super(driver);
@@ -23,7 +23,7 @@ public class AbstractDetailsPage extends AbstractPage {
 
     //private static final By LICENSED_CONTENT_PUBLISHER_LOCATOR = By.name("orderContentPublisher");
 
-    public String getPageTitle(){
+    public String getTitle(){
         return driver.findElement(PAGE_TITLE_LOCATOR).getText();
     }
 

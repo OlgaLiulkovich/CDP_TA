@@ -15,15 +15,17 @@ public class QuickPricePage extends AbstractPage {
     private static final By REQUESTER_TYPE_LOCATOR = By.name("requesterType");
     private static final By FORMAT_LOCATOR = By.name("format");
     private static final By PORTION_LOCATOR = By.name("portionUsed");
+    private static final By NUMFIGURES_LOCATOR = By.name("numFigures");
     private static final By TRANSLATING_LOCATOR = By.name("translating");
     private static final By QUICK_PRICE_LOCATOR = By.name("quickprice");
     private static final By ESTIMATED_PRICE_LOCATOR = By.name("priceDouble");
     private static final By CONTINUE_LOCATOR = By.name("continue");
+    private static final By PAGE_TITLE_LOCATOR = By.name("pgTitle");
 
 
     public QuickPricePage(WebDriver driver) {
         super(driver);
-    }
+    } // move env here
 
     public QuickPricePage open(String env) {
         //env = "s"; // non prod env
@@ -37,44 +39,89 @@ public class QuickPricePage extends AbstractPage {
         return new QuickPricePage(driver);
     }
 
-    public QuickPricePage selectRequesterType(String value){
+    public QuickPricePage selectRequesterType(String value) {
         Select ddl = new Select(driver.findElement(REQUESTER_TYPE_LOCATOR));
         ddl.selectByVisibleText(value);
         return new QuickPricePage(driver);
     }
 
-    public QuickPricePage selectFormat(String value){
+    public QuickPricePage selectFormat(String value) {
         Select ddl = new Select(driver.findElement(FORMAT_LOCATOR));
         ddl.selectByVisibleText(value);
         return new QuickPricePage(driver);
     }
-    public QuickPricePage selectPortion(String value){
+
+    public QuickPricePage selectPortion(String value) {
         Select ddl = new Select(driver.findElement(PORTION_LOCATOR));
         ddl.selectByVisibleText(value);
         return new QuickPricePage(driver);
     }
-    public QuickPricePage selectTranslating(String value){
+
+    public QuickPricePage fillInNumFigures(String value){
+        driver.findElement(NUMFIGURES_LOCATOR).sendKeys(value);
+        return new QuickPricePage(driver);
+    }
+
+    public QuickPricePage selectTranslating(String value) {
         Select ddl = new Select(driver.findElement(TRANSLATING_LOCATOR));
         ddl.selectByVisibleText(value);
         return new QuickPricePage(driver);
     }
-    public QuickPricePage clickQuickPrice(){
+
+    public QuickPricePage clickQuickPrice() {
         driver.findElement(QUICK_PRICE_LOCATOR).click();
         return new QuickPricePage(driver);
     }
 
-    public String getPrice(){
+    public String getPrice() {
         String estPrice = driver.findElement(ESTIMATED_PRICE_LOCATOR).getText();
         return estPrice;
     }
 
-    public QuickPricePage clickContinue(){
+    public QuickPricePage clickContinue() {
         driver.findElement(CONTINUE_LOCATOR).click();
         return new QuickPricePage(driver);
     }
 
+    public QuickPricePage fillInQPP(
+            QuickPricePage page,
+            String typeOfUse,
+            String requesterType,
+            String format,
+            String portion,
+            String translating) {
 
+        page.selectTypeOfUse(typeOfUse);
+        page.selectRequesterType(requesterType);
+        page.selectFormat(format);
+        page.selectPortion(portion);
+        page.selectTranslating(translating);
 
+        return page;
 
+    }
+
+    public QuickPricePage fillInQPP(
+            String typeOfUse,
+            String requesterType,
+            String format,
+            String portion,
+            String numFigures,
+            String translating) {
+
+        this.selectTypeOfUse(typeOfUse);
+        this.selectRequesterType(requesterType);
+        this.selectFormat(format);
+        this.selectPortion(portion);
+        this.fillInNumFigures(numFigures);
+        this.selectTranslating(translating);
+
+        return this;
+
+    }
+
+    public String getTitle(){
+        return driver.findElement(PAGE_TITLE_LOCATOR).getText();
+    }
 
 }
