@@ -49,7 +49,7 @@ public class ReuseInABookMRSelectWork {
     ) {
 
         // open landing page
-        QuickPricePage refBPage = new QuickPricePage(driver).open("s");
+        QuickPricePage refBPage = new QuickPricePage(driver).open();
         // fill in QPP
         refBPage.fillInQPP(typeOfUse, requesterType, format, portion, numPortion, translating);
         //calculate price and assert it

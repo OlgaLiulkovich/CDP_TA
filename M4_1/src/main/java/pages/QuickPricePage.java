@@ -27,11 +27,8 @@ public class QuickPricePage extends AbstractPage {
         super(driver);
     } // move env here
 
-    public QuickPricePage open(String env) {
-        //env = "s"; // non prod env
-        //System.out.println(System.getProperty("ENVIRONMENT"));
-        //System.getProperty("ENVIRONMENT");
-        driver.get("https://" + env + "100.copyright.com/AppDispatchServlet?publisherName=refB&publication=RefB1&author=Snoopy&orderBeanReset=true&title=refB+Title&volumeNum=34&issueNum=15&debug=1&contentID=10.3945/ajcn.115.122937&numPages=10&proxyOrder=false&publicationDate=July+6%2C+2008");
+    public QuickPricePage open() {
+        driver.get("https://" + System.getenv("ENVIRONMENT") + "100.copyright.com/AppDispatchServlet?publisherName=refB&publication=RefB1&author=Snoopy&orderBeanReset=true&title=refB+Title&volumeNum=34&issueNum=15&debug=1&contentID=10.3945/ajcn.115.122937&numPages=10&proxyOrder=false&publicationDate=July+6%2C+2008");
         return this;
     }
 
