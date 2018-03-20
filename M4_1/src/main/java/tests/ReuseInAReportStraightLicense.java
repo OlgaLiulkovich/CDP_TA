@@ -53,7 +53,7 @@ public class ReuseInAReportStraightLicense {
     ) {
 
         // open landing page
-        QuickPricePage refBPage = new QuickPricePage(driver).open("s");
+        QuickPricePage refBPage = new QuickPricePage(driver).open();
         // fill in QPP
         refBPage.fillInQPP(refBPage, typeOfUse, requesterType, format, portion, translating);
         //calculate price and assert it

@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 /**
  * Login page class
@@ -17,32 +19,34 @@ public class LoginPage extends AbstractPage {
     //private static final By TITLE_LOCATOR = By.xpath("//*[@name='submit']"); - Doesn't work!!!
 
 
-    public LoginPage fillinUserName (String name){
-        driver.findElement(USERNAME_LOCATOR).sendKeys(name);
+    public LoginPage fillinUserName(String name) {
+        WebElement field = driver.findElement(USERNAME_LOCATOR);
+        new Actions(driver).sendKeys(field, name).build().perform();
+        //driver.findElement(USERNAME_LOCATOR).sendKeys(name);
         return this;
     }
-    public LoginPage fillinPassword (String name){
-        driver.findElement(PASSWORD_LOCATOR).sendKeys(name);
+
+    public LoginPage fillinPassword(String name) {
+        WebElement field = driver.findElement(PASSWORD_LOCATOR);
+        new Actions(driver).sendKeys(field, name).build().perform();
         return this;
     }
-    public LoginPage clickSignIn (){
+
+    public LoginPage clickSignIn() {
         driver.findElement(SIGNIN_LOCATOR).click();
         return this;
     }
 
-    public LoginPage signIn(LoginPage page, String userName, String password){
+    public LoginPage signIn(LoginPage page, String userName, String password) {
         page.fillinUserName(userName);
         page.fillinPassword(password);
         page.clickSignIn();
         return this;
     }
 
-    public String getTitle(){
+    public String getTitle() {
         return "";
     }
-
-
-
 
 
 }
