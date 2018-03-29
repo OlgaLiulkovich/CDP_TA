@@ -13,6 +13,7 @@ import pages.LoginPage;
 import pages.MyLibrary.NewWork.NewWorkReportTOUPage;
 import pages.QuickPricePage;
 
+import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 
@@ -26,7 +27,7 @@ public class ReuseInAReportMR {
     private WebDriver driver;
 
     @BeforeClass(description = "Start browser")
-    private void initBrowser() {
+    private void initBrowser() throws MalformedURLException {
         Utils beforeClass = new Utils();
         driver = beforeClass.initBrowser();
     }

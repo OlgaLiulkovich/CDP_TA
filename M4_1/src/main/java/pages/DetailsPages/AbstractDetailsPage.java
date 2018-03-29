@@ -14,7 +14,10 @@ public abstract class AbstractDetailsPage extends AbstractPage {
         super(driver);
     }
 
-    private static final By PAGE_TITLE_LOCATOR = By.name("co_pgTitleRO");
+    //private static final By PAGE_TITLE_LOCATOR = By.name("co_pgTitleRO");
+
+    private static final By PAGE_TITLE_LOCATOR = By.cssSelector(".PageTitle");
+
     private static final By LICENSED_CONTENT_PUBLISHER_LOCATOR = By.name("orderContentPublisher");
     private static final By LICENSED_CONTENT_PUBLICATION_LOCATOR = By.name("orderContentPublication");
     private static final By LICENSED_CONTENT_TITLE_LOCATOR = By.name("orderContentTitle");
@@ -41,6 +44,12 @@ public abstract class AbstractDetailsPage extends AbstractPage {
 
     public String getContentPublisherAuthor(){
         return driver.findElement(LICENSED_CONTENT_PUBLISHER_AUTHOR).getText();
+    }
+
+    public void highlightHeader(WebDriver driver) {
+
+        this.highlightElement(driver, driver.findElement(PAGE_TITLE_LOCATOR));
+
     }
 
 

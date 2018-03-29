@@ -13,6 +13,7 @@ import pages.LoginPage;
 import pages.MyLibrary.MyLibaryList.ReportTOUMyLibraryListPage;
 import pages.QuickPricePage;
 
+import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -25,7 +26,7 @@ public class ReuseInABookMRSelectWork {
     private WebDriver driver;
 
     @BeforeClass(description = "Start browser")
-    private void initBrowser() {
+    private void initBrowser() throws MalformedURLException {
         Utils beforeClass = new Utils();
         driver = beforeClass.initBrowser();
     }
@@ -76,6 +77,7 @@ public class ReuseInABookMRSelectWork {
         //check that Order Review page got open
         ReviewOrderPage reviewOrder = new ReviewOrderPage(driver);
         // assert data on Review Order page
+        reviewOrder.highlightHeader(driver);
         Assert.assertEquals(reviewOrder.getContentPublisher(), "refB Publishing Group Ltd.", "Wrong Content Publisher value on details page");
         Assert.assertEquals(reviewOrder.getContentPublication(), "RefB1", "Wrong Content Publication value on details page");
 
