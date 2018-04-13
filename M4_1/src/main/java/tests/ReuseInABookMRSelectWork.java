@@ -12,6 +12,7 @@ import pages.LogOutPage;
 import pages.LoginPage;
 import pages.MyLibrary.MyLibaryList.ReportTOUMyLibraryListPage;
 import pages.QuickPricePage;
+import utils.Browser;
 
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
@@ -27,7 +28,7 @@ public class ReuseInABookMRSelectWork {
 
     @BeforeClass(description = "Start browser")
     private void initBrowser() throws MalformedURLException {
-        Utils beforeClass = new Utils();
+        Browser beforeClass = new Browser();
         driver = beforeClass.initBrowser();
     }
 
@@ -90,7 +91,7 @@ public class ReuseInABookMRSelectWork {
 
     @AfterClass(description = "Close browser")
     public void closeBrowser() {
-        Utils afterClass = new Utils();
+        Browser afterClass = new Browser();
         afterClass.closeBrowser(driver);
     }
 

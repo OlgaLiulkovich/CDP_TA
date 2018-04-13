@@ -9,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
  * Login page class
  */
 public class LoginPage extends AbstractPage {
+
     public LoginPage(WebDriver driver) {
         super(driver);
     }

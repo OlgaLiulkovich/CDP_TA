@@ -8,7 +8,7 @@ import pages.AbstractPage;
 /**
  * Abstract class for New Work pages
  */
-public abstract class AbstractNewWorkPage extends AbstractPage {
+public abstract class AbstractNewWorkPage extends AbstractPage implements INewWork  {
 
     public AbstractNewWorkPage(WebDriver driver) {
         super(driver);
@@ -24,5 +24,7 @@ public abstract class AbstractNewWorkPage extends AbstractPage {
 
         return driver.findElement(PAGE_TITLE_LOCATOR).getText();
     }
+
+    public abstract AbstractNewWorkPage fillInNewWork(AbstractNewWorkPage page, NewWorkData data);
 
 }

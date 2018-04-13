@@ -8,7 +8,7 @@ import pages.MyLibrary.NewWork.AbstractNewWorkPage;
 /**
  * New Work page for Report Type of Use.
  */
-public class NewWorkReportTOUPage extends AbstractNewWorkPage {
+public class NewWorkReportTOUPage extends AbstractNewWorkPage implements INewWork{
 
     public NewWorkReportTOUPage(WebDriver driver) {
         super(driver);
@@ -53,20 +53,16 @@ public class NewWorkReportTOUPage extends AbstractNewWorkPage {
     }
 
     public NewWorkReportTOUPage fillInNewWork(
-            NewWorkReportTOUPage page,
-            String title,
-            String author,
-            String publisher,
-            String workSize,
-            String year
+            AbstractNewWorkPage page,
+            NewWorkData data
     ) {
-        page.fillInTitle(title);
-        page.fillInAuthor(author);
-        page.fillInPublisher(publisher);
-        page.fillInWorkSize(workSize);
-        page.selectYear(year);
+        NewWorkReportTOUPage page1 = (NewWorkReportTOUPage) page;
+        page1.fillInTitle(data.getTitle());
+        page1.fillInAuthor(data.getAuthor());
+        page1.fillInPublisher(data.getPublisher());
+        page1.fillInWorkSize(data.getWorkSize());
+        page1.selectYear(data.getYear());
         return this;
     }
-
 
 }

@@ -10,8 +10,10 @@ import pages.ADP.ReportTOUAdditionalDataPage;
 import pages.DetailsPages.ReviewOrderPage;
 import pages.LogOutPage;
 import pages.LoginPage;
+import pages.MyLibrary.NewWork.NewWorkData;
 import pages.MyLibrary.NewWork.NewWorkReportTOUPage;
 import pages.QuickPricePage;
+import utils.Browser;
 
 import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
@@ -28,7 +30,7 @@ public class ReuseInAReportMR {
 
     @BeforeClass(description = "Start browser")
     private void initBrowser() throws MalformedURLException {
-        Utils beforeClass = new Utils();
+        Browser beforeClass = new Browser();
         driver = beforeClass.initBrowser();
     }
 
@@ -71,7 +73,8 @@ public class ReuseInAReportMR {
         //create New Work
         NewWorkReportTOUPage newWork = new NewWorkReportTOUPage(driver);
         Assert.assertTrue(newWork.isCurrent("About Your Work"), "Didn't get to New Works page");
-        newWork.fillInNewWork(newWork, title, author, publisher, workSize, year);
+        NewWorkData workTestData = NewWorkData.create(title, author, publisher, workSize, year);
+        newWork.fillInNewWork(newWork, workTestData);
         newWork.clickContinue();
         //check that ADP is open
         ReportTOUAdditionalDataPage adp = new ReportTOUAdditionalDataPage(driver);
@@ -96,10 +99,9 @@ public class ReuseInAReportMR {
 
     @AfterClass(description = "Close browser")
     public void closeBrowser() {
-        Utils afterClass = new Utils();
+        Browser afterClass = new Browser();
         afterClass.closeBrowser(driver);
     }
-
 
 
     @DataProvider(name = "Reuse in a Report Job Ticket")
