@@ -4,13 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import pages.AbstractPage;
+import utils.CustomWebDriver;
 
 /**
  * Abstract Additional DAta Page class
  */
 public class AbstractAdditionalDataPage extends AbstractPage {
 
-    public AbstractAdditionalDataPage(WebDriver driver) {
+    public AbstractAdditionalDataPage(CustomWebDriver driver) {
         super(driver);
     }
 

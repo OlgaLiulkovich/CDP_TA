@@ -4,13 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import utils.CustomWebDriver;
 
 /**
  * Login page class
  */
 public class LoginPage extends AbstractPage {
 
-    public LoginPage(WebDriver driver) {
+    public LoginPage(CustomWebDriver driver) {
         super(driver);
     }
 
@@ -22,14 +23,13 @@ public class LoginPage extends AbstractPage {
 
     public LoginPage fillinUserName(String name) {
         WebElement field = driver.findElement(USERNAME_LOCATOR);
-        new Actions(driver).sendKeys(field, name).build().perform();
-        //driver.findElement(USERNAME_LOCATOR).sendKeys(name);
+        //new Actions(driver).sendKeys(field, name).build().perform();
+        driver.findElement(USERNAME_LOCATOR).sendKeys(name);
         return this;
     }
 
     public LoginPage fillinPassword(String name) {
-        WebElement field = driver.findElement(PASSWORD_LOCATOR);
-        new Actions(driver).sendKeys(field, name).build().perform();
+        driver.findElement(PASSWORD_LOCATOR).sendKeys(name);
         return this;
     }
 

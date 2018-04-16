@@ -4,13 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pages.ADP.AbstractAdditionalDataPage;
 import pages.AbstractPage;
+import utils.CustomWebDriver;
 
 /**
  * Abstract class for Details pages
  */
 public abstract class AbstractDetailsPage extends AbstractPage {
 
-    public AbstractDetailsPage(WebDriver driver) {
+    public AbstractDetailsPage(CustomWebDriver driver) {
         super(driver);
     }
 
@@ -46,9 +47,9 @@ public abstract class AbstractDetailsPage extends AbstractPage {
         return driver.findElement(LICENSED_CONTENT_PUBLISHER_AUTHOR).getText();
     }
 
-    public void highlightHeader(WebDriver driver) {
+    public void highlightHeader(CustomWebDriver driver) {
 
-        this.highlightElement(driver, driver.findElement(PAGE_TITLE_LOCATOR));
+        //this.highlightElement(driver, driver.findElement(PAGE_TITLE_LOCATOR));
 
     }
 

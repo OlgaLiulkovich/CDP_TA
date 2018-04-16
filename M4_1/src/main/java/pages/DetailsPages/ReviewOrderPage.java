@@ -1,6 +1,7 @@
 package pages.DetailsPages;
 
 import org.openqa.selenium.WebDriver;
+import utils.CustomWebDriver;
 
 import java.lang.ref.SoftReference;
 
@@ -9,7 +10,7 @@ import java.lang.ref.SoftReference;
  */
 public class ReviewOrderPage extends AbstractDetailsPage {
 
-    public ReviewOrderPage(WebDriver driver) {
+    public ReviewOrderPage(CustomWebDriver driver) {
         super(driver);
     }
 

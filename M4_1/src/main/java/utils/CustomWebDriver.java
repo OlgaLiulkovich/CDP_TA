@@ -20,55 +20,60 @@ public class CustomWebDriver implements WebDriver {
     }
 
     public void get(String s) {
-
+        driver.get(s);
     }
 
     public String getCurrentUrl() {
-        return null;
+
+        return driver.getCurrentUrl();
     }
 
     public String getTitle() {
-        return null;
+
+        return driver.getTitle();
     }
 
     public List<WebElement> findElements(By by) {
-        return null;
+        return driver.findElements(by);
     }
 
     public WebElement findElement(By by) {
-        return null;
+        return driver.findElement(by);
     }
 
     public String getPageSource() {
-        return null;
+
+        return driver.getPageSource();
     }
 
     public void close() {
+        driver.close();
         System.out.println("closing webdriver");
 
     }
 
     public void quit() {
-
+        driver.close();
     }
 
     public Set<String> getWindowHandles() {
-        return null;
+        return driver.getWindowHandles();
     }
 
     public String getWindowHandle() {
-        return null;
+        return driver.getWindowHandle();
     }
 
     public TargetLocator switchTo() {
-        return null;
+        return driver.switchTo();
     }
 
     public Navigation navigate() {
-        return null;
+        return driver.navigate();
     }
 
     public Options manage() {
-        return null;
+
+        return driver.manage();
     }
 }

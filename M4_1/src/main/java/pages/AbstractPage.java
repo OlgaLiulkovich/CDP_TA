@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import utils.Browser;
+import utils.CustomWebDriver;
 
 /**
  * Abstract Page class
@@ -16,9 +17,9 @@ import utils.Browser;
  */
 public abstract class AbstractPage {
     private static final int WAIT_FOR_ELEMENT_TIMEOUT_SECONDS = 10;
-    protected WebDriver driver;
+    protected CustomWebDriver driver;
 
-    public AbstractPage(WebDriver driver) {
+    public AbstractPage(CustomWebDriver driver) {
         this.driver = Browser.initBrowser();
     }
 
@@ -44,7 +45,7 @@ public abstract class AbstractPage {
         return this.getTitle().equals(title);
     }
 
-    public void highlightElement(WebDriver driver, WebElement element)
+    public void highlightElement(CustomWebDriver driver, WebElement element)
     {
         String bg = element.getCssValue("backgroundColor");
         JavascriptExecutor js = ((JavascriptExecutor) driver);

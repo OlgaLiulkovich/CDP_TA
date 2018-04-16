@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
+import utils.CustomWebDriver;
 
 /**
  * Quick Price Page object
@@ -23,7 +24,7 @@ public class QuickPricePage extends AbstractPage {
     private static final By PAGE_TITLE_LOCATOR = By.name("pgTitle");
 
 
-    public QuickPricePage(WebDriver driver) {
+    public QuickPricePage(CustomWebDriver driver) {
         super(driver);
     } // move env here
 

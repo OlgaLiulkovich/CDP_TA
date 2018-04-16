@@ -14,6 +14,7 @@ import pages.MyLibrary.NewWork.NewWorkData;
 import pages.MyLibrary.NewWork.NewWorkReportTOUPage;
 import pages.QuickPricePage;
 import utils.Browser;
+import utils.CustomWebDriver;
 
 import java.net.MalformedURLException;
 
@@ -24,7 +25,7 @@ import java.net.MalformedURLException;
  */
 public class ReuseInAReportStraightLicense {
 
-    private WebDriver driver;
+    private CustomWebDriver driver;
 
     @BeforeClass(description = "Start browser")
     private void initBrowser() throws MalformedURLException {

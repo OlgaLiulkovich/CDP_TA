@@ -4,13 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import pages.MyLibrary.NewWork.AbstractNewWorkPage;
+import utils.CustomWebDriver;
 
 /**
  * New Work page for Report Type of Use.
  */
 public class NewWorkReportTOUPage extends AbstractNewWorkPage implements INewWork{
 
-    public NewWorkReportTOUPage(WebDriver driver) {
+    public NewWorkReportTOUPage(CustomWebDriver driver) {
         super(driver);
     }
 

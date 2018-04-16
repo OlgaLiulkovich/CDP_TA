@@ -3,13 +3,14 @@ package pages.MyLibrary.MyLibaryList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import pages.AbstractPage;
+import utils.CustomWebDriver;
 
 /**
  * MyLibrary list page class
  */
 public abstract class AbstractMyLibraryListPage extends AbstractPage {
 
-    public AbstractMyLibraryListPage(WebDriver driver) {
+    public AbstractMyLibraryListPage(CustomWebDriver driver) {
         super(driver);
     }
 

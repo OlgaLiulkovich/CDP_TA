@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import pages.AbstractPage;
+import utils.CustomWebDriver;
 
 /**
  * Abstract class for New Work pages
@@ -19,7 +20,7 @@ public abstract class AbstractNewWorkPage extends AbstractPage implements INewWo
     private static final By WORK_SIZE_LOCATOR = By.name("newWorkSize");
     private static final By CONTINUE_LOCATOR = By.linkText("CONTINUE");
 
-    public AbstractNewWorkPage(WebDriver driver) {
+    public AbstractNewWorkPage(CustomWebDriver driver) {
         super(driver);
     }
 

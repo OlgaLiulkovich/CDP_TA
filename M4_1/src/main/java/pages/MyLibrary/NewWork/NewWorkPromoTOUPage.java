@@ -1,13 +1,14 @@
 package pages.MyLibrary.NewWork;
 
 import org.openqa.selenium.WebDriver;
+import utils.CustomWebDriver;
 
 /**
  * New Work page for Promo Type of Use.
  */
 public class NewWorkPromoTOUPage extends AbstractNewWorkPage implements INewWork{
 
-    public NewWorkPromoTOUPage(WebDriver driver) {
+    public NewWorkPromoTOUPage(CustomWebDriver driver) {
         super(driver);
     }
 

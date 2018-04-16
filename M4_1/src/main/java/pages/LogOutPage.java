@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.CustomWebDriver;
 
 /**
  * Class for clicking LogOut button
@@ -16,7 +17,7 @@ public class LogOutPage extends AbstractPage {
         return this;
     }
 
-    public LogOutPage(WebDriver driver){super(driver);}
+    public LogOutPage(CustomWebDriver driver){super(driver);}
 
     public String getTitle(){
         return driver.findElement(TITLE_LOCATOR).getText();

@@ -15,6 +15,7 @@ import pages.MyLibrary.NewWork.NewWorkPromoTOUPage;
 import pages.MyLibrary.NewWork.NewWorkReportTOUPage;
 import pages.QuickPricePage;
 import utils.Browser;
+import utils.CustomWebDriver;
 
 import java.net.MalformedURLException;
 
@@ -26,7 +27,7 @@ import java.net.MalformedURLException;
  */
 public class ReuseInAPromoMR {
 
-    private WebDriver driver;
+    private CustomWebDriver driver;
 
     @BeforeClass(description = "Start browser")
     private void initBrowser() throws MalformedURLException {
