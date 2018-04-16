@@ -3,6 +3,7 @@ package pages.MyLibrary.NewWork;
 import com.sun.webkit.WebPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 import pages.AbstractPage;
 
 /**
@@ -10,11 +11,17 @@ import pages.AbstractPage;
  */
 public abstract class AbstractNewWorkPage extends AbstractPage implements INewWork  {
 
+    private static final By PAGE_TITLE_LOCATOR = By.name("new_work_pgTitle11");
+    private static final By TITLE_LOCATOR = By.name("addNewTitle");
+    private static final By AUTHOR_LOCATOR = By.name("newCreator");
+    private static final By PUBLISHER_LOCATOR = By.name("addNewPub");
+    private static final By YEAR_LOCATOR = By.name("addNewPubYear");
+    private static final By WORK_SIZE_LOCATOR = By.name("newWorkSize");
+    private static final By CONTINUE_LOCATOR = By.linkText("CONTINUE");
+
     public AbstractNewWorkPage(WebDriver driver) {
         super(driver);
     }
-
-    private static final By PAGE_TITLE_LOCATOR = By.name("new_work_pgTitle11");
 
     public String getTitle(){
 
@@ -26,5 +33,36 @@ public abstract class AbstractNewWorkPage extends AbstractPage implements INewWo
     }
 
     public abstract AbstractNewWorkPage fillInNewWork(AbstractNewWorkPage page, NewWorkData data);
+
+    public AbstractNewWorkPage fillInTitle(String value) {
+        driver.findElement(TITLE_LOCATOR).sendKeys(value);
+        return this;
+    }
+
+    public AbstractNewWorkPage fillInAuthor(String value) {
+        driver.findElement(AUTHOR_LOCATOR).sendKeys(value);
+        return this;
+    }
+
+    public AbstractNewWorkPage fillInPublisher(String value) {
+        driver.findElement(PUBLISHER_LOCATOR).sendKeys(value);
+        return this;
+    }
+
+    public AbstractNewWorkPage selectYear(String value) {
+        Select yearDdl = new Select(driver.findElement(YEAR_LOCATOR));
+        yearDdl.selectByVisibleText(value);
+        return this;
+    }
+
+    public AbstractNewWorkPage fillInWorkSize(String value) {
+        driver.findElement(WORK_SIZE_LOCATOR).sendKeys(value);
+        return this;
+    }
+
+    public AbstractNewWorkPage clickContinue() {
+        driver.findElement(CONTINUE_LOCATOR).click();
+        return this;
+    }
 
 }

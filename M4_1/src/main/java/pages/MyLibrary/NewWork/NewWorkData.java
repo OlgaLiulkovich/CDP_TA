@@ -66,4 +66,16 @@ public class NewWorkData {
         return data;
     }
 
+    public static NewWorkData create (
+            String title,
+            String publisher,
+            String year
+    ){
+        NewWorkData data = new NewWorkData();
+        data.setTitle(title);
+        data.setPublisher(publisher);
+        data.setYear(year);
+        return data;
+    }
+
 }

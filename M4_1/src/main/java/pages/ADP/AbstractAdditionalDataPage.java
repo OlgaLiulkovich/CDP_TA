@@ -17,6 +17,9 @@ public class AbstractAdditionalDataPage extends AbstractPage {
     private static final By PAGE_TITLE_LOCATOR = By.name("adh_pgTitle");
     private static final By ORDER_REFERENCE_LOCATOR = By.name("PONumber");
     private static final By CONTINUE_LOCATOR = By.linkText("CONTINUE");
+    private static final By CIRCULATION_LOCATOR = By.name("circulation");
+    private static final By PORTIONS_LOCATOR = By.name("detailsOfUse");
+
 
     public String getTitle(){
         return driver.findElement(PAGE_TITLE_LOCATOR).getText();
@@ -32,6 +35,15 @@ public class AbstractAdditionalDataPage extends AbstractPage {
         return this;
     }
 
+    public AbstractAdditionalDataPage fillInCirculation(String value){
+        driver.findElement(CIRCULATION_LOCATOR).sendKeys(value);
+        return this;
+    }
+
+    public AbstractAdditionalDataPage fillInPortions(String value){
+        driver.findElement(PORTIONS_LOCATOR).sendKeys(value);
+        return this;
+    }
 
 
 

@@ -28,8 +28,7 @@ public class ReuseInAReportStraightLicense {
 
     @BeforeClass(description = "Start browser")
     private void initBrowser() throws MalformedURLException {
-        Browser beforeClass = new Browser();
-        driver = beforeClass.initBrowser();
+        this.driver = Browser.initBrowser();
     }
 
     @Test(dataProvider = "Reuse in a Report Straight License", description = "Smoke Test for refB TOU = reuse in a report - Straight License")
@@ -95,11 +94,8 @@ public class ReuseInAReportStraightLicense {
 
     @AfterClass(description = "Close browser")
     public void closeBrowser() {
-        Browser afterClass = new Browser();
-        afterClass.closeBrowser(driver);
+        Browser.closeBrowser(driver);
     }
-
-
 
     @DataProvider(name = "Reuse in a Report Straight License")
     public static Object[][] validTestData() {

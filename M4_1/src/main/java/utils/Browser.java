@@ -13,13 +13,25 @@ import java.util.concurrent.TimeUnit;
  */
 public class Browser {
 
-    private WebDriver driver;
+    private static WebDriver driver = null;
+    private static WebDriver instance = null;
 
-    private void Browser(){};
 
-    public WebDriver initBrowser() throws MalformedURLException {
+    private Browser( WebDriver driver){
+        this.driver = driver;
 
+    }; // update it based on the discussion
+
+    public static WebDriver initBrowser() {
+        if (instance != null){
+            return instance;
+        }
+        return instance = init();
+    }
+
+    private static WebDriver init(){
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
+        WebDriver driver = null;
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--incognito");
         DesiredCapabilities capabilities = DesiredCapabilities.chrome();
@@ -33,11 +45,16 @@ public class Browser {
         return driver;
     }
 
-    public void closeBrowser(WebDriver driver) {
-        driver.close();
+    public static void closeBrowser(WebDriver driver) {
+        if (instance != null) {
+            try {
+                instance.quit();
+            } catch (Exception e) {
+            } finally {
+                instance = null;
+            }
+        }
+
     }
-
-
-
 
 }

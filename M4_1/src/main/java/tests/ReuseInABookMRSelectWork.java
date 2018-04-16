@@ -28,8 +28,7 @@ public class ReuseInABookMRSelectWork {
 
     @BeforeClass(description = "Start browser")
     private void initBrowser() throws MalformedURLException {
-        Browser beforeClass = new Browser();
-        driver = beforeClass.initBrowser();
+        this.driver = Browser.initBrowser();
     }
 
     @Test(dataProvider = "Reuse in a Book Job Ticket", description = "Smoke Test for refB TOU = reuse in a book - Job Ticket")
@@ -91,8 +90,7 @@ public class ReuseInABookMRSelectWork {
 
     @AfterClass(description = "Close browser")
     public void closeBrowser() {
-        Browser afterClass = new Browser();
-        afterClass.closeBrowser(driver);
+        Browser.closeBrowser(driver);
     }
 
 

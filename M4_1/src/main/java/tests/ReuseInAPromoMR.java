@@ -11,12 +11,12 @@ import pages.DetailsPages.ReviewOrderPage;
 import pages.LogOutPage;
 import pages.LoginPage;
 import pages.MyLibrary.NewWork.NewWorkData;
+import pages.MyLibrary.NewWork.NewWorkPromoTOUPage;
 import pages.MyLibrary.NewWork.NewWorkReportTOUPage;
 import pages.QuickPricePage;
 import utils.Browser;
 
 import java.net.MalformedURLException;
-import java.util.concurrent.TimeUnit;
 
 
 /**
@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
  *
  * @author Olga_Liulkovich
  */
-public class ReuseInAReportMR {
+public class ReuseInAPromoMR {
 
     private WebDriver driver;
 
@@ -33,8 +33,8 @@ public class ReuseInAReportMR {
         this.driver = Browser.initBrowser();
     }
 
-    @Test(dataProvider = "Reuse in a Report Job Ticket", description = "Smoke Test for refB TOU = reuse in a report - Job Ticket")
-    public void ReuseInAReportStraightLicenseTest(
+    @Test(dataProvider = "Reuse in a Promo Job Ticket", description = "Smoke Test for refB TOU = reuse in a promo - Job Ticket")
+    public void ReuseInAPromoMRTest(
             String typeOfUse,
             String requesterType,
             String format,
@@ -47,9 +47,7 @@ public class ReuseInAReportMR {
             String password,
 
             String title,
-            String author,
             String publisher,
-            String workSize,
             String year,
 
             String orderRef,
@@ -70,10 +68,10 @@ public class ReuseInAReportMR {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.signIn(loginPage, userName, password);
         //create New Work
-        NewWorkReportTOUPage newWork = new NewWorkReportTOUPage(driver);
+        NewWorkPromoTOUPage newWork = new NewWorkPromoTOUPage(driver);
         Assert.assertTrue(newWork.isCurrent("About Your Work"), "Didn't get to New Works page");
 
-        NewWorkData workTestData = NewWorkData.create(title, author, publisher, workSize, year);
+        NewWorkData workTestData = NewWorkData.create(title, publisher, year);
         newWork.fillInNewWork(newWork, workTestData);
 
         newWork.clickContinue();
@@ -82,7 +80,6 @@ public class ReuseInAReportMR {
         Assert.assertTrue(adp.isCurrent("Additional Information"), "Didn't get to ADP");
         // fill in ADP
         adp.fillInOrderRef(orderRef);
-        adp.fillInCirculation(circulation);
         adp.fillInPortions(portions);
         adp.clickContinue();
         //check that Order Review page got open
@@ -104,13 +101,12 @@ public class ReuseInAReportMR {
     }
 
 
-
-    @DataProvider(name = "Reuse in a Report Job Ticket")
+    @DataProvider(name = "Reuse in a Promo Job Ticket")
     public static Object[][] validTestData() {
         return new Object[][]{
-                {"reuse in a report", "Government", "Print and electronic", "Figure/table/extract", "11", "No", "Not Available",//QPP data
+                {"reuse in promotional materials/brochure", "Government", "Print and electronic", "Figure/table/extract", "11", "No", "Not Available",//QPP data
                         "oliulkovich@copyright.com", "123456", //login data }
-                        "test title", "OL test", "OL test", "50", "2020", //new work data
+                        "test title", "OL test", "2020", //new work data
                         "OL test", "OL Test Portion", "100" //ADP data
                 }
 
